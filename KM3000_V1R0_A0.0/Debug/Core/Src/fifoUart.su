@@ -1,0 +1,10 @@
+../Core/Src/fifoUart.cpp:20:6:bool fifoCommands::available()	16	static
+../Core/Src/fifoUart.cpp:28:6:void fifoCommands::add(uint8_t*, uint8_t)	32	static
+../Core/Src/fifoUart.cpp:52:6:void fifoCommands::read(uint8_t*, uint8_t)	32	static
+../Core/Src/fifoUart.cpp:77:1:fifoUart::fifoUart()	16	static
+../Core/Src/fifoUart.cpp:87:6:bool fifoUart::insertElement(uint8_t)	16	static
+../Core/Src/fifoUart.cpp:110:9:uint8_t fifoUart::readElement()	24	static
+../Core/Src/fifoUart.cpp:136:9:uint8_t fifoUart::seeElement()	16	static
+../Core/Src/fifoUart.cpp:144:6:bool fifoUart::available()	16	static
+../Core/Src/fifoUart.cpp:159:6:bool fifoUart::bussy()	16	static
+../Core/Src/fifoUart.cpp:167:5:int fifoUart::largeFifo()	16	static

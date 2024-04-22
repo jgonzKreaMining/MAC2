@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;KM3000_V1R0_A0.0/Core/Src/hardware.cpp&apos; to &apos;hardwareIn.cpp&apos;" description="Rename resource &apos;hardware.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/hardware.cpp" name="hardwareIn.cpp" stamp="1706543877059" updateReferences="true"/>
+</session>

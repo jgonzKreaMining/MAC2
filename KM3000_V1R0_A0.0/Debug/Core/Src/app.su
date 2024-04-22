@@ -1,0 +1,7 @@
+../Core/Src/app.cpp:99:6:void app()	8	static
+../Core/Src/app.cpp:114:6:void appContent()	8	static
+../Core/Src/app.cpp:335:6:void appLora()	8	static
+../Core/Src/app.cpp:540:9:uint8_t uint2hex_A(uint8_t)	24	static
+../Core/Src/app.cpp:611:9:uint8_t uint2hex_B(uint8_t)	24	static
+../Core/Src/app.cpp:680:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/app.cpp:680:1:cpp)	8	static

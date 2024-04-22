@@ -1,0 +1,13 @@
+txCommandPointer->command
+stateLoraApp
+responseLora
+qttyMessagesInputs
+stateLoraApp
+countResetHwLora2
+qttyMessagesInputs2
+qttyMsgData
+qttyMsgGps
+qttyMsgSys
+busTcpLora
+latitud
+longitud

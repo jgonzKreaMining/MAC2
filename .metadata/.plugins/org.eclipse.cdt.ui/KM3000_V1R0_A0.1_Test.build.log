@@ -1,0 +1,10 @@
+13:01:39 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.1_Test ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.1_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52668	    888	   3908	  57464	   e078	KM3000_V1R0_A0.1_Test.elf
+Finished building: default.size.stdout
+ 
+
+13:01:40 Build Finished. 0 errors, 0 warnings. (took 652ms)
+

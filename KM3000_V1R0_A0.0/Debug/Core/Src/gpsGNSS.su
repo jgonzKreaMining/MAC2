@@ -1,0 +1,21 @@
+../Core/Src/gpsGNSS.cpp:18:1:gpsInput::gpsInput()	16	static
+../Core/Src/gpsGNSS.cpp:30:6:void gpsInput::insertValue(uint8_t)	24	static
+../Core/Src/gpsGNSS.cpp:466:6:void gpsInput::setMode(uint8_t)	32	static
+../Core/Src/gpsGNSS.cpp:536:6:void gpsInput::setValid(char)	16	static
+../Core/Src/gpsGNSS.cpp:550:10:long int gpsInput::getDate()	24	static
+../Core/Src/gpsGNSS.cpp:567:7:float gpsInput::getTime()	32	static
+../Core/Src/gpsGNSS.cpp:587:6:char gpsInput::getLatDirect()	16	static
+../Core/Src/gpsGNSS.cpp:595:5:int gpsInput::getLatitud()	24	static
+../Core/Src/gpsGNSS.cpp:606:5:int gpsInput::getLatitud2()	24	static
+../Core/Src/gpsGNSS.cpp:622:6:char gpsInput::getLongDirect()	16	static
+../Core/Src/gpsGNSS.cpp:630:5:int gpsInput::getLongitud()	24	static
+../Core/Src/gpsGNSS.cpp:642:5:int gpsInput::getLongitud2()	24	static
+../Core/Src/gpsGNSS.cpp:658:7:float gpsInput::getHeight()	16	static
+../Core/Src/gpsGNSS.cpp:666:9:uint8_t gpsInput::getMode()	16	static
+../Core/Src/gpsGNSS.cpp:674:5:int gpsInput::getBetween()	16	static
+../Core/Src/gpsGNSS.cpp:682:6:bool gpsInput::getValid()	24	static
+../Core/Src/gpsGNSS.cpp:699:6:bool gpsInput::getTimeout()	16	static
+../Core/Src/gpsGNSS.cpp:707:6:bool gpsInput::getNewMessage()	16	static
+../Core/Src/gpsGNSS.cpp:712:9:uint8_t gpsInput::state_Insert()	16	static
+../Core/Src/gpsGNSS.cpp:720:6:bool gpsInput::getSource()	16	static
+../Core/Src/gpsGNSS.cpp:724:6:void gpsInput::setSource(bool)	16	static

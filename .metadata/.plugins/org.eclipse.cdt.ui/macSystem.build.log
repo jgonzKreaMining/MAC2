@@ -1,0 +1,10 @@
+12:14:03 **** Incremental Build of configuration Debug for project macSystem ****
+make -j8 all 
+arm-none-eabi-size  macSystem.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17296	     28	   2320	  19644	   4cbc	macSystem.elf
+Finished building: default.size.stdout
+ 
+
+12:14:03 Build Finished. 0 errors, 0 warnings. (took 319ms)
+

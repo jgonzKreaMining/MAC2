@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;macSystem/Core/Inc/loraE5&apos; to &apos;loraE5.h&apos;" description="Rename resource &apos;loraE5&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/loraE5" name="loraE5.h" stamp="1700486521199" updateReferences="true"/>
+</session>

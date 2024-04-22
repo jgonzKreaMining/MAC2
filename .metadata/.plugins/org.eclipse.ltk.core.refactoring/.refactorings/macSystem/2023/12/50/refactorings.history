@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;macSystem/Core/Src/covery&apos; to &apos;covery.C&apos;" description="Rename resource &apos;covery&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/covery" name="covery.C" stamp="1702305811347" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;macSystem/Core/Src/covery.C&apos; to &apos;covery.c&apos;" description="Rename resource &apos;covery.C&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/covery.C" name="covery.c" stamp="1702305832600" updateReferences="true"/>
+</session>
