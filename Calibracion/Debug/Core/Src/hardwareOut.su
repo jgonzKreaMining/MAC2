@@ -1,0 +1,9 @@
+../Core/Src/hardwareOut.cpp:129:6:void hwOutput()	8	static
+../Core/Src/hardwareOut.cpp:142:6:void hwEEPROMOut()	8	static
+../Core/Src/hardwareOut.cpp:185:6:void hwLedOut()	8	static
+../Core/Src/hardwareOut.cpp:287:6:void hwGpsOut()	8	static
+../Core/Src/hardwareOut.cpp:471:6:void hwLoraOut()	8	static
+../Core/Src/hardwareOut.cpp:556:6:void hwAlarms()	8	static
+../Core/Src/hardwareOut.cpp:589:6:void hwDisplay()	8	static
+../Core/Src/hardwareOut.cpp:725:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/hardwareOut.cpp:725:1:cpp)	8	static

@@ -1,0 +1,222 @@
+/*
+ * app.cpp
+ *
+ *  Created on: Mar 1, 2024
+ *      Author: jgonz
+ */
+
+#include <app.h>
+#include <gpsGNSS.h>
+#include <loraApp.h>
+#include <loraTcp.h>
+#include <loraLink.h>
+#include "fifoUart.h"
+
+///////////////
+// SUPERLOOP //
+///////////////
+
+extern uint8_t superloop;
+
+//////////////////////
+// ANALOG VARIABLES //
+//////////////////////
+
+/*
+extern uint16_t tempApp;		// Temperatura sistema
+extern uint16_t humApp;			// Humedad sistema
+
+extern uint16_t alphaA;			// ADC Externo
+extern uint16_t alphaB;			// ADC Externo
+
+extern uint16_t alphaAnalog_A;	// ADC Interno
+extern uint16_t alphaAnalog_B;	// ADC Interno
+*/
+/////////////
+// WARMING //
+/////////////
+
+uint8_t stateWarming;							//
+uint32_t countWarming;							//
+uint32_t limitWarming	= 1200000/superloop;	//
+
+bool flagWarmingOk;								//
+bool flagResetWarming;							//
+
+/////////////
+// PROCESS //
+/////////////
+
+uint8_t stateProcess;							//
+
+uint32_t countProcess;							//
+const uint32_t limitProcess	= 20000/superloop;	//
+
+bool flagResetProcess;							//
+bool flagStability;								//
+
+/////////
+// APP //
+/////////
+
+void app(){
+	warming();
+	process();
+	display();
+}
+
+/////////////
+// PROCESS //
+/////////////
+
+/*
+ * S0:	START PROCESS
+ * S1: 	WAIT FOR WARMING / EVALUATE STABILITY
+ * S2:	WAIT FOR STABILITY
+ * S3:	ERROR FOR INESTABILITY
+ * S4:	SET GROUND
+ * S5:	WAIT FOR START EXPERIMENT
+ * S6: 	CHECK GROW / CHECK STABILITY
+ * S7:	SET FINAL POINT
+ * S8:	SAVE IN EEPROM
+ * S9:	WAIT FOR RESET PROCESS
+ */
+
+void process(){
+
+	switch ( stateProcess ){
+
+	////////////////////////
+	// S0 - START PROCESS //
+	////////////////////////
+
+	case 0:
+		flagResetWarming	= 1;	//
+		stateProcess		= 1;	//
+		break;
+
+	///////////////////////////
+	// S1 - WAIT FOR WARMING //
+	///////////////////////////
+
+	case 1:
+		flagResetWarming	= 0;	//
+
+		if ( flagWarmingOk ){		//
+			stateProcess	= 2;	//
+		}
+		else{						//
+			stateProcess	= 1;	//
+		}
+		break;
+
+	//////////////////////////
+	// S2 - CHECK STABILITY //
+	//////////////////////////
+
+	case 2:
+		countProcess++;
+
+		/*
+		 * Check stability
+		 *
+		 * flagStability = 1 : Stably
+		 * flagStability = 0 : Inestability
+		 *
+		 */
+
+		if ( countProcess >= limitProcess && flagStability ){			//
+			countProcess	= 0;										//
+			stateProcess	= 4;										//
+		}
+		else if ( countProcess >= limitProcess && !flagStability ){		//
+			countProcess	= 0;										//
+			stateProcess	= 3;										//
+		}
+		else{															//
+			stateProcess	= 2;										//
+		}
+		break;
+
+	//////////////////////////
+	// S3 - ERROR STABILITY //
+	//////////////////////////
+
+	case 3:
+
+		if ( flagResetProcess ){
+			stateProcess	= 0;
+		}
+		else{
+			stateProcess	= 3;
+		}
+		break;
+
+	/////////////////////
+	// S4 - SET GROUND //
+	/////////////////////
+
+	case 4:
+		/*
+		 * SET GROUND
+		 */
+		stateProcess	= 5;
+		break;
+	}
+
+}
+
+/////////////
+// WARMING //
+/////////////
+
+void warming(){
+	switch( stateWarming ){
+
+	/////////////////////////
+	// S0 - WAIT FOR RESET //
+	/////////////////////////
+
+	case 0:
+		flagWarmingOk	= 0;		//
+		if ( flagResetWarming ){	//
+			stateWarming	= 1;	//
+		}
+		else{						//
+			stateWarming	= 0;	//
+		}
+		break;
+
+	/////////////////////
+	// S1 - WAIT LIMIT //
+	/////////////////////
+
+	case 1:
+		countWarming++;							//
+		flagWarmingOk	= 0;					//
+
+		if ( countWarming >= limitWarming ){	//
+			countWarming	= 0;				//
+			stateWarming	= 2;				//
+		}
+		else{									//
+			stateWarming	= 1;				//
+		}
+		break;
+
+	/////////////////////
+	// S2 - WARMING OK //
+	/////////////////////
+
+	case 2:
+		flagWarmingOk	= 1;	//
+		stateWarming	= 0;	//
+		break;
+	}
+}
+
+
+
+void display(){
+
+}

@@ -1,0 +1,23 @@
+/*
+ * tcpOut.cpp
+ *
+ *  Created on: Feb 29, 2024
+ *      Author: jgonz
+ */
+
+#include <tcp.h>
+#include "loraTcp.h"
+#include "loraLink.h"
+
+///////////////
+// SUPERLOOP //
+///////////////
+
+extern uint8_t superloop;
+
+/*****	OUTPUT	*****/
+
+void tcpOutput(){
+}
+
+

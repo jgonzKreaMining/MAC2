@@ -9,9 +9,7 @@
 #define INC_LINK_H_
 
 #include <7segments.h>
-#include <gpsGNSS.h>
 #include <hardware.h>
-#include <loraLink.h>
 
 ///////////
 // INPUT //

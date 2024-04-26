@@ -1,0 +1,43 @@
+/*
+ * app.cpp
+ *
+ *  Created on: Mar 1, 2024
+ *      Author: jgonz
+ */
+
+#include <app.h>
+#include <gpsGNSS.h>
+#include <loraApp.h>
+#include <loraTcp.h>
+#include <loraLink.h>
+#include "fifoUart.h"
+
+///////////////
+// SUPERLOOP //
+///////////////
+
+extern uint8_t superloop;
+
+
+
+/////////
+// APP //
+/////////
+
+void app(){
+	warming();
+	process();
+	display();
+}
+
+void warming(){
+
+}
+
+void process(){
+
+}
+
+void display(){
+
+}

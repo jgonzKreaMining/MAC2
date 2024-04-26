@@ -1,0 +1,8 @@
+../Core/Src/EEPROM.cpp:40:10:uint16_t bytestowrite(uint16_t, uint16_t)	2
+../Core/Src/EEPROM.cpp:52:6:void EEPROM_Write(uint16_t, uint16_t, uint8_t*, uint16_t)	3
+../Core/Src/EEPROM.cpp:86:6:void float2Bytes(uint8_t*, float)	2
+../Core/Src/EEPROM.cpp:101:7:float Bytes2float(uint8_t*)	2
+../Core/Src/EEPROM.cpp:123:6:void EEPROM_Write_NUM(uint16_t, uint16_t, float)	1
+../Core/Src/EEPROM.cpp:137:7:float EEPROM_Read_NUM(uint16_t, uint16_t)	1
+../Core/Src/EEPROM.cpp:152:6:void EEPROM_Read(uint16_t, uint16_t, uint8_t*, uint16_t)	3
+../Core/Src/EEPROM.cpp:178:6:void EEPROM_PageErase(uint16_t)	1

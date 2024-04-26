@@ -1,0 +1,175 @@
+/*
+ * hardwareOut.cpp
+ *
+ *  Created on: Jan 29, 2024
+ *      Author: jgonz
+ */
+
+#include <main.h>
+#include <hardware.h>
+#include <string>
+#include "stm32l4xx_hal.h"
+
+extern uint8_t superloop;
+
+/////////////
+// DISPLAY //
+/////////////
+
+extern displayPhysical displayPhy;	//
+
+
+
+/***** OUTPUT	*****/
+
+void hwOutput(){
+	//hwDisplay();
+}
+
+/************************
+ *** DISPLAY HARDWARE ***
+ ************************
+ *
+ *	Accion sobre leds
+ *
+ */
+
+void hwDisplay(){
+	/***** DIGITS 	*****/
+
+	/////////////////
+	// FIRST DIGIT //
+	/////////////////
+
+	if ( displayPhy.firstNumber() ){
+		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_0, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_0, GPIO_PIN_RESET);
+	}
+
+	//////////////////
+	// SECOND DIGIT //
+	//////////////////
+
+	if ( displayPhy.secondNumber() ){
+		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_1, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_1, GPIO_PIN_RESET);
+	}
+
+	/////////////////
+	// THIRD DIGIT //
+	/////////////////
+
+	if ( displayPhy.thirdNumber() ){
+		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_2, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_2, GPIO_PIN_RESET);
+	}
+
+	//////////////////
+	// FOURTH DIGIT //
+	//////////////////
+
+	if ( displayPhy.fourthNumber() ){
+		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_3, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_3, GPIO_PIN_RESET);
+	}
+
+	/***** 	LEDS	*****/
+
+	///////////
+	// A LED //
+	///////////
+
+	if ( displayPhy.aLed() ){
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_8,  GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_8,  GPIO_PIN_RESET);
+	}
+
+	///////////
+	// B LED //
+	///////////
+
+	if ( displayPhy.bLed() ){
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_9,  GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_9,  GPIO_PIN_RESET);
+	}
+
+	///////////
+	// C LED //
+	///////////
+
+	if ( displayPhy.cLed() ){
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_10, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_10, GPIO_PIN_RESET);
+	}
+
+	///////////
+	// D LED //
+	///////////
+
+	if ( displayPhy.dLed() ){
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_11, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_11, GPIO_PIN_RESET);
+	}
+
+	///////////
+	// E LED //
+	///////////
+
+	if ( displayPhy.eLed() ){
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);
+	}
+
+	///////////
+	// F LED //
+	///////////
+
+	if ( displayPhy.fLed() ){
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);
+	}
+
+	///////////
+	// G LED //
+	///////////
+
+	if ( displayPhy.gLed() ){
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET);
+	}
+
+	////////////
+	// DP LED //
+	////////////
+
+	if ( displayPhy.dpLed() ){
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
+	}
+}
+
+

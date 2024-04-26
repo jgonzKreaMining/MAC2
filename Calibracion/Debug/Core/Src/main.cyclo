@@ -1,0 +1,19 @@
+../Core/Inc/fifoUart.h:18:7:fifoCommands::fifoCommands()	1
+../Core/Src/main.cpp:220:5:int main()	2
+../Core/Src/main.cpp:328:6:void SystemClock_Config()	4
+../Core/Src/main.cpp:372:6:void MX_IWDG_Init()	2
+../Core/Src/main.cpp:398:13:void MX_ADC1_Init()	6
+../Core/Src/main.cpp:482:13:void MX_I2C1_Init()	4
+../Core/Src/main.cpp:529:13:void MX_TIM6_Init()	3
+../Core/Src/main.cpp:567:13:void MX_UART4_Init()	2
+../Core/Src/main.cpp:602:13:void MX_UART5_Init()	2
+../Core/Src/main.cpp:635:13:void MX_DMA_Init()	1
+../Core/Src/main.cpp:672:13:void MX_GPIO_Init()	1
+../Core/Src/main.cpp:739:6:void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*)	2
+../Core/Src/main.cpp:749:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	3
+../Core/Src/main.cpp:771:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
+../Core/Src/main.cpp:781:6:void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef*)	1
+../Core/Src/main.cpp:786:6:void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef*)	1
+../Core/Src/main.cpp:797:6:void Error_Handler()	1
+../Core/Src/main.cpp:806:1:void __static_initialization_and_destruction_0(int, int)	3
+../Core/Src/main.cpp:806:1:cpp)	1

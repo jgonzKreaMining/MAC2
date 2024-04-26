@@ -6,10 +6,8 @@
  */
 
 #include <main.h>
-#include <fifoUart.h>
-#include <gpsGNSS.h>
 #include <hardware.h>
-#include <loraLink.h>
+
 
 #include "stm32l4xx_hal.h"
 
@@ -161,21 +159,6 @@ uint8_t stateEEPROM;		// Estado de maquina EEPROM
 uint8_t nameAlphaA[]	= "HCL A1 ALPHASENSE";	// Valor de verificación específico MAC
 uint8_t nameAlphaB[]	= "HCL B1 ALPHASENSE";	// Valor de verificación específico MAC
 
-/////////
-// GPS //
-/////////
-
-extern fifoUart gpsIn;		// Fifo de entrada
-extern gpsInput gpsInput;	// Detecta GPRMC y separa datos
-uint8_t gpsBus;				// Buffer de traspaso
-
-//////////
-// LORA //
-//////////
-
-uint8_t  loraBus;			// Buffer para traspasar info entre Fifo e Input
-extern fifoUart loraIn;		// Fifo con elementos desde DMA
-extern loraInput loraInput;	// Detecta mensaje valido en caractares entrantes
 
 /////////////
 // GENERAL //
@@ -209,29 +192,11 @@ void hwInput(){
 	hwBoton();
 	hwSht31();
 	hwAds1115();
-	hwAnalog();
-	hwEEPROM();
-	hwGpsIn();
-	hwLoraIn();
+	//hwAnalog();
+	//hwEEPROM();
 }
 
-/***********************
- *****	LORA INPUT *****
- ***********************
- *
- * Traspaso de datos desde DMA a FIFO
- * Traspaso de FIFO a bus loraBus
- * Traspaso de de loraBus a loraInput
- *
- * loraInput detecta respuesta dentro de bytes entrantes
- */
 
-void hwLoraIn(){
-	if ( loraIn.available() ){					// Si hay elementos disponibles en FIFO desde DMA
-		loraBus	= loraIn.readElement();			// Guarda el valor
-		loraInput.insertElement( loraBus );		// Inserta en Lora Input
-	}
-}
 
 /*******************
  ***** ADS1115 *****
@@ -573,28 +538,6 @@ void hwBoton(){
 
 	default:
 		break;
-	}
-}
-
-/**********************
- *****	GPS INPUT	***
- **********************
- *
- *	Revisa el estado de la FIFO sobre el puerto serial de GPS
- *	Inserta el valor en la clase gpsInput
- *
- *	INPUT	:	gpsIn.available()
- *	OUTPUT	:	gpsInput.inserValue()
- */
-
-void hwGpsIn(){
-	if ( gpsIn.available() ){			// Si hay un elemento en fifo
-		gpsBus = gpsIn.readElement();	// Lee valor en fifo
-		gpsInput.insertValue( gpsBus );	// Pasa el simbolo al otro metodo
-
-		if ( gpsInput.stateInsert == 7){
-			gpsBus = gpsBus;
-		}
 	}
 }
 

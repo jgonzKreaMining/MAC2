@@ -1,19 +1,16 @@
-../Core/Inc/fifoUart.h:18:7:fifoCommands::fifoCommands()	1
-../Core/Src/main.cpp:220:5:int main()	2
-../Core/Src/main.cpp:329:6:void SystemClock_Config()	4
-../Core/Src/main.cpp:373:6:void MX_IWDG_Init()	2
-../Core/Src/main.cpp:399:13:void MX_ADC1_Init()	6
-../Core/Src/main.cpp:483:13:void MX_I2C1_Init()	4
-../Core/Src/main.cpp:530:13:void MX_TIM6_Init()	3
-../Core/Src/main.cpp:568:13:void MX_UART4_Init()	2
-../Core/Src/main.cpp:603:13:void MX_UART5_Init()	2
-../Core/Src/main.cpp:636:13:void MX_DMA_Init()	1
-../Core/Src/main.cpp:673:13:void MX_GPIO_Init()	1
-../Core/Src/main.cpp:740:6:void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*)	2
-../Core/Src/main.cpp:750:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	3
-../Core/Src/main.cpp:772:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
-../Core/Src/main.cpp:782:6:void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef*)	1
-../Core/Src/main.cpp:787:6:void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef*)	1
-../Core/Src/main.cpp:798:6:void Error_Handler()	1
-../Core/Src/main.cpp:807:1:void __static_initialization_and_destruction_0(int, int)	3
-../Core/Src/main.cpp:807:1:cpp)	1
+../Core/Src/main.cpp:157:5:int main()	2
+../Core/Src/main.cpp:241:6:void SystemClock_Config()	4
+../Core/Src/main.cpp:285:6:void MX_IWDG_Init()	2
+../Core/Src/main.cpp:311:13:void MX_ADC1_Init()	6
+../Core/Src/main.cpp:395:13:void MX_I2C1_Init()	4
+../Core/Src/main.cpp:442:13:void MX_TIM6_Init()	3
+../Core/Src/main.cpp:480:13:void MX_UART4_Init()	2
+../Core/Src/main.cpp:515:13:void MX_UART5_Init()	2
+../Core/Src/main.cpp:548:13:void MX_DMA_Init()	1
+../Core/Src/main.cpp:585:13:void MX_GPIO_Init()	1
+../Core/Src/main.cpp:652:6:void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*)	2
+../Core/Src/main.cpp:662:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	1
+../Core/Src/main.cpp:684:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
+../Core/Src/main.cpp:694:6:void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef*)	1
+../Core/Src/main.cpp:699:6:void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef*)	1
+../Core/Src/main.cpp:710:6:void Error_Handler()	1
