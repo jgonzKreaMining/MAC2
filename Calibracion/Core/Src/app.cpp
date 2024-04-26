@@ -163,6 +163,7 @@ extern bool flagLedOn;
 extern bool flagLedOff;
 extern bool flagLedFreq;
 
+extern bool flagSaveEeprom;
 ////////////
 // FILTER //
 ////////////

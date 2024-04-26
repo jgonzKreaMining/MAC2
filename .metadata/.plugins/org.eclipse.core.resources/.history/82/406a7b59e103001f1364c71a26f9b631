@@ -40,11 +40,8 @@ extern bool flagSetSys;				// Indica que reloj TCP de datos de sistema caducó
 uint8_t content[9];					// Bus para contenido de datos
 uint8_t content2[9];				// Bus para contenido de datos 2
 
-uint8_t b1_HCL;						// Valor de HCL sensor B1
+uint8_t b1_HCL	= 100;				// Valor de HCL sensor B1
 uint8_t a1_HCL;						// Valor de HCL sensor A1
-
-extern uint16_t alphaA;				//
-extern uint16_t alphaB;				//
 
 extern uint16_t tempApp;			// Temperatura a enviar
 extern uint16_t humApp;				// Humedad a enviar
@@ -171,9 +168,6 @@ void appContent(){
 		humApp		= humApp/10;			// Reduce resolucion de humedad
 
 		content[0]	= '1';					// Indica que los datos van sobre puerto 1
-
-		a1_HCL	= alphaA/16;
-		b1_HCL	= alphaB/16;
 
 		content[1]	= uint2hex_A(b1_HCL);	// Guarda primeros 4 bits de B1 HCL
 		content[2]	= uint2hex_B(b1_HCL);	// Guarda segundos 4 bits de B1 HCL
