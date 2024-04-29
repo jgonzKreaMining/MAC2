@@ -11510,3 +11510,819 @@ Finished building: default.size.stdout
  
 Finished building: KM3000_V1R0_A0.0.list
  
+05:22:50 **** Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55228	    968	   5068	  61264	   ef50	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+05:27:15 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/hardwareIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareIn.d" -MT"Core/Src/hardwareIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  56596	   1128	   5068	  62792	   f548	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+05:29:01 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/hardwareIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareIn.d" -MT"Core/Src/hardwareIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55228	    968	   5068	  61264	   ef50	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+05:34:26 **** Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-size  Calibracion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54796	   1124	   5192	  61112	   eeb8	Calibracion.elf
+Finished building: default.size.stdout
+ 
+05:35:21 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-size  Calibracion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54796	   1124	   5192	  61112	   eeb8	Calibracion.elf
+Finished building: default.size.stdout
+ 
+05:38:15 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+../Core/Src/app.cpp: In function 'void process()':
+../Core/Src/app.cpp:507:44: warning: comparison of integer expressions of different signedness: 'int' and 'const uint32_t' {aka 'const long unsigned int'} [-Wsign-compare]
+  507 |                 if (alphaA_LP - meanAlphaA >= limitStability ){         // Si se detecta increento
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54808	   1124	   5192	  61124	   eec4	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+05:44:08 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54796	   1124	   5192	  61112	   eeb8	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+05:50:12 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54752	   1124	   5192	  61068	   ee8c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+05:55:00 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/hardwareOut.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareOut.d" -MT"Core/Src/hardwareOut.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareOut.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  53504	    964	   5192	  59660	   e90c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:03:21 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/hardwareOut.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareOut.d" -MT"Core/Src/hardwareOut.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareOut.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54768	   1124	   5192	  61084	   ee9c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:09:56 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/hardwareOut.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareOut.d" -MT"Core/Src/hardwareOut.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareOut.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54796	   1124	   5192	  61112	   eeb8	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:40:31 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+../Core/Src/app.cpp: In function 'void process()':
+../Core/Src/app.cpp:533:25: error: 'groundSensor0' was not declared in this scope
+  533 |                         groundSensor0[0]        = (meanAlphaA && 0xFF);
+      |                         ^~~~~~~~~~~~~
+../Core/Src/app.cpp:534:64: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  534 |                         groundSensor0[1]        = ((meanAlphaA << 8 ) && 0xFF);
+      |                                                    ~~~~~~~~~~~~^~~~~~
+../Core/Src/app.cpp:538:25: error: 'curveSensor0' was not declared in this scope
+  538 |                         curveSensor0[0]         = ( (meanAlphaA_2 - meanAlphaA ) && 0xFF);
+      |                         ^~~~~~~~~~~~
+../Core/Src/app.cpp:539:83: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  539 |                         curveSensor0[1]         = ( ((meanAlphaA_2 - meanAlphaA ) << 8 ) && 0xFF);
+      |                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+make: *** [Core/Src/subdir.mk:80: Core/Src/app.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+06:40:32 **** Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  Calibracion_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36416	     48	   2748	  39212	   992c	Calibracion_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+06:40:33 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55228	    968	   5068	  61264	   ef50	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+06:41:32 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+../Core/Src/app.cpp: In function 'void process()':
+../Core/Src/app.cpp:537:64: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  537 |                         groundSensor0[1]        = ((meanAlphaA << 8 ) && 0xFF);
+      |                                                    ~~~~~~~~~~~~^~~~~~
+../Core/Src/app.cpp:542:83: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  542 |                         curveSensor0[1]         = ( ((meanAlphaA_2 - meanAlphaA ) << 8 ) && 0xFF);
+      |                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54972	   1124	   5192	  61288	   ef68	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:41:35 **** Incremental Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  Calibracion_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36416	     48	   2748	  39212	   992c	Calibracion_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+06:41:35 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55228	    968	   5068	  61264	   ef50	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+06:41:59 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54972	   1124	   5192	  61288	   ef68	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:46:29 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+../Core/Src/app.cpp: In function 'void process()':
+../Core/Src/app.cpp:537:64: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  537 |                         groundSensor0[1]        = ((meanAlphaA << 8 ) && 0xFF);
+      |                                                    ~~~~~~~~~~~~^~~~~~
+../Core/Src/app.cpp:542:82: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  542 |                         curveSensor0[1]         =  ((meanAlphaA_2 - meanAlphaA ) << 8 ) && 0xFF;
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54972	   1124	   5192	  61288	   ef68	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:48:06 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+../Core/Src/app.cpp: In function 'void process()':
+../Core/Src/app.cpp:537:64: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  537 |                         groundSensor0[1]        = ((meanAlphaA << 8 ) && 0xFF);
+      |                                                    ~~~~~~~~~~~~^~~~~~
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54968	   1124	   5192	  61284	   ef64	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:50:41 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+../Core/Src/app.cpp: In function 'void process()':
+../Core/Src/app.cpp:537:64: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  537 |                         groundSensor0[1]        = ((meanAlphaA << 8 ) && 0xFF);
+      |                                                    ~~~~~~~~~~~~^~~~~~
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54968	   1124	   5192	  61284	   ef64	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:54:09 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+../Core/Src/app.cpp: In function 'void process()':
+../Core/Src/app.cpp:537:72: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  537 |                         groundSensor0[1]        = uint8_t ((meanAlphaA << 8 ) && 0xFF);
+      |                                                            ~~~~~~~~~~~~^~~~~~
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54968	   1124	   5192	  61284	   ef64	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+06:54:11 **** Incremental Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  Calibracion_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36416	     48	   2748	  39212	   992c	Calibracion_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+06:54:12 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55228	    968	   5068	  61264	   ef50	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+06:56:00 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+../Core/Src/app.cpp: In function 'void process()':
+../Core/Src/app.cpp:537:72: warning: '<<' in boolean context, did you mean '<'? [-Wint-in-bool-context]
+  537 |                         groundSensor0[1]        = uint8_t ((meanAlphaA << 8 ) && 0xFF);
+      |                                                            ~~~~~~~~~~~~^~~~~~
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54968	   1124	   5192	  61284	   ef64	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+07:09:31 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54932	   1124	   5192	  61248	   ef40	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+07:09:33 **** Incremental Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  Calibracion_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36416	     48	   2748	  39212	   992c	Calibracion_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+07:09:34 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55228	    968	   5068	  61264	   ef50	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+07:09:47 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54928	   1124	   5192	  61244	   ef3c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+07:19:26 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+arm-none-eabi-g++ "../Core/Src/hardwareOut.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareOut.d" -MT"Core/Src/hardwareOut.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareOut.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54928	   1124	   5192	  61244	   ef3c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+07:39:48 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55228	    968	   5068	  61264	   ef50	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+07:43:17 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/hardwareIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareIn.d" -MT"Core/Src/hardwareIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55252	    968	   5068	  61288	   ef68	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+07:52:48 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54944	   1124	   5192	  61260	   ef4c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+07:57:17 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55252	    968	   5068	  61288	   ef68	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+08:06:07 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/hardwareIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareIn.d" -MT"Core/Src/hardwareIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareIn.o"
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55324	    968	   5076	  61368	   efb8	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:07:55 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/hardwareIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hardwareIn.d" -MT"Core/Src/hardwareIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hardwareIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55324	    968	   5076	  61368	   efb8	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:36:59 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55328	    968	   5076	  61372	   efbc	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:38:11 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+../Core/Src/linkIn.cpp: In function 'uint8_t adc2PPM(uint16_t, uint8_t)':
+../Core/Src/linkIn.cpp:564:32: error: expected ';' before 'break'
+  564 |                 result = signal//(signal - groundAlphaA)/curveAlphaA;
+      |                                ^
+      |                                ;
+  565 |                 break;
+      |                 ~~~~~           
+../Core/Src/linkIn.cpp:572:58: warning: statement has no effect [-Wunused-value]
+  572 |                 result = signal/2;(signal - groundAlphaA)/curveAlphaA;
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:80: Core/Src/linkIn.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:38:24 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55296	    968	   5076	  61340	   ef9c	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:42:00 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55296	    968	   5076	  61340	   ef9c	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:42:58 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55304	    968	   5076	  61348	   efa4	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:44:46 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55304	    968	   5076	  61348	   efa4	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:46:23 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-size  Calibracion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54944	   1124	   5192	  61260	   ef4c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+08:46:24 **** Incremental Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  Calibracion_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36416	     48	   2748	  39212	   992c	Calibracion_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+08:46:24 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+../Core/Src/linkIn.cpp:554:10: error: ambiguating new declaration of 'uint16_t adc2PPM(uint16_t, uint8_t)'
+  554 | uint16_t adc2PPM( uint16_t signal, uint8_t mode){
+      |          ^~~~~~~
+In file included from ../Core/Src/linkIn.cpp:8:
+../Core/Inc/link.h:26:9: note: old declaration 'uint8_t adc2PPM(uint16_t, uint8_t)'
+   26 | uint8_t adc2PPM( uint16_t signal, uint8_t mode );
+      |         ^~~~~~~
+make: *** [Core/Src/subdir.mk:80: Core/Src/linkIn.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:46:44 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-size  Calibracion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54944	   1124	   5192	  61260	   ef4c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+08:46:45 **** Incremental Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  Calibracion_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36416	     48	   2748	  39212	   992c	Calibracion_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+08:46:46 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ "../Core/Src/linkOut.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkOut.d" -MT"Core/Src/linkOut.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkOut.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55308	    968	   5076	  61352	   efa8	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:46:52 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55308	    968	   5076	  61352	   efa8	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+08:47:54 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55308	    968	   5076	  61352	   efa8	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:49:38 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55328	    968	   5076	  61372	   efbc	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:51:18 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55332	    968	   5076	  61376	   efc0	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:52:37 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55304	    968	   5076	  61348	   efa4	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:53:54 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55324	    968	   5076	  61368	   efb8	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:55:06 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55312	    968	   5076	  61356	   efac	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:58:24 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  56324	    968	   5076	  62368	   f3a0	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+08:59:43 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55328	    968	   5076	  61372	   efbc	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+09:00:52 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+../Core/Src/linkIn.cpp: In function 'uint16_t adc2PPM(uint16_t, uint8_t)':
+../Core/Src/linkIn.cpp:571:34: error: 'cuveAlphaA' was not declared in this scope; did you mean 'curveAlphaA'?
+  571 |                 result  = result/cuveAlphaA;
+      |                                  ^~~~~~~~~~
+      |                                  curveAlphaA
+make: *** [Core/Src/subdir.mk:80: Core/Src/linkIn.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+09:01:42 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/linkIn.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/linkIn.d" -MT"Core/Src/linkIn.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/linkIn.o"
+arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
+Finished building target: KM3000_V1R0_A0.0.elf
+ 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  55344	    968	   5076	  61388	   efcc	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: KM3000_V1R0_A0.0.list
+ 
+09:05:59 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
+arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Calibracion.elf has a LOAD segment with RWX permissions
+Finished building target: Calibracion.elf
+ 
+arm-none-eabi-size  Calibracion.elf 
+arm-none-eabi-objdump -h -S Calibracion.elf  > "Calibracion.list"
+   text	   data	    bss	    dec	    hex	filename
+  54944	   1124	   5192	  61260	   ef4c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+Finished building: Calibracion.list
+ 
+09:14:49 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55344	    968	   5076	  61388	   efcc	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+11:40:32 **** Incremental Build of configuration Debug for project Calibracion ****
+make -j8 all 
+arm-none-eabi-size  Calibracion.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54944	   1124	   5192	  61260	   ef4c	Calibracion.elf
+Finished building: default.size.stdout
+ 
+11:40:33 **** Incremental Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  Calibracion_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36416	     48	   2748	  39212	   992c	Calibracion_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 
+11:40:34 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+make -j8 all 
+arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  55344	    968	   5076	  61388	   efcc	KM3000_V1R0_A0.0.elf
+Finished building: default.size.stdout
+ 

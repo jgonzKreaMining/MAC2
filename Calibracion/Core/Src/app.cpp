@@ -124,7 +124,7 @@ extern uint16_t alphaB;
 extern uint16_t alphaAnalog_A;
 extern uint16_t alphaAnalog_B;
 
-int alphaA_LP;
+uint16_t alphaA_LP;
 int alphaA_BP;
 
 extern uint8_t stateAdc;
@@ -143,6 +143,7 @@ uint32_t countStability;
 uint8_t countStability2;
 uint8_t countStability3;
 
+const uint16_t limitGrowHcl		= 500;
 
 const uint32_t limitStability	= 20000/superloop;
 const uint8_t limitRetStab		= 6;
@@ -153,6 +154,9 @@ bool flagFinishStab;
 uint8_t sizeBufStab	= 30;
 uint16_t bufferStabA[ 30 ];
 
+extern uint8_t groundSensor0[5];
+extern uint8_t curveSensor0[5];
+
 /////////////
 // DISPLAY //
 /////////////
@@ -162,8 +166,8 @@ uint8_t calibContent[4]	= {0, 0, 0, 0};
 extern bool flagLedOn;
 extern bool flagLedOff;
 extern bool flagLedFreq;
-
 extern bool flagSaveEeprom;
+
 ////////////
 // FILTER //
 ////////////
@@ -504,7 +508,7 @@ void process(){
 	case 6:
 		countProcess++;										// Suma 1 al contador
 
-		if (alphaA_LP - meanAlphaA >=  1){//limitStability ){ // Si se detecta increento
+		if (alphaA_LP - meanAlphaA >= limitGrowHcl ){ 	// Si se detecta increento
 			flagStartStability	= 1;
 			countProcess	= 0;							// Reinicia contador
 			stateProcess	= 7;							// Pasa a S7
@@ -523,11 +527,22 @@ void process(){
 	/////////////////////////////
 
 	case 7:
-		flagStartStability	= 0;						// Reinicia flag
-		countProcess++;									// Suma 1 al proceso
+		flagStartStability	= 0;							// Reinicia flag
+		countProcess++;										// Suma 1 al proceso
 
-		if ( flagFinishStab && flagStability){			// Si es estable
-			meanAlphaA_2	= alphaA_LP;				//
+		if ( flagFinishStab && flagStability){				// Si es estable
+			meanAlphaA_2	= (alphaA_LP - meanAlphaA)/50;	//
+
+			groundSensor0[0]	= meanAlphaA & 0xFF;		//
+			groundSensor0[1]	= meanAlphaA >> 8;			//
+			groundSensor0[2]	= 0;						//
+			groundSensor0[3]	= 0;						//
+
+			curveSensor0[0]		=  meanAlphaA_2 & 0xFF;	//
+			curveSensor0[1]		=  meanAlphaA_2 >> 8;	//
+			curveSensor0[2]		= 0;					//
+			curveSensor0[3]		= 0;					//
+
 			flagSaveEeprom	= 1;						//
 			countProcess	= 0;						//
 			stateProcess	= 8;						// Pasa a S5

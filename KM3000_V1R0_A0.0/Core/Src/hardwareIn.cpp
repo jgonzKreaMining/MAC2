@@ -112,6 +112,9 @@ uint8_t stateAnalog;				// Estado de la máquina
 // EEPROM //
 ////////////
 
+uint16_t groundAlphaA;
+uint16_t curveAlphaA;
+
 /** Valores fijos **/
 
 extern uint8_t nameSensor0[20];		// Nombre del dispositivo
@@ -708,44 +711,56 @@ void hwEEPROM(){
 	//////////////////////
 
 	case 0:
-
 		EEPROM_Read(0, 0,  nameSensor_0,	sizeof(nameSensor_0));		// Name of sensor
 		EEPROM_Read(0, 20, idSensor_0,		sizeof(idSensor_0));		// ID of sensor
 		EEPROM_Read(0, 24, rangeSensor_0,	sizeof(rangeSensor_0));		// Range of sensor
 		EEPROM_Read(0, 28, amplifier_10,	sizeof(amplifier_10));		// Amplifier 1 of sensor
+		stateEEPROM	= 1;												// S1 to read page 1
+		break;
+
+	case 1:
 		EEPROM_Read(0, 32, amplifier_20,	sizeof(amplifier_20));		// Amplifier 2 of sensor
 		EEPROM_Read(0, 36, groundSensor_0,	sizeof(groundSensor_0));	// N of curve
 		EEPROM_Read(0, 40, curveSensor_0,	sizeof(curveSensor_0));		// M of curve
 		EEPROM_Read(0, 44, dateCalib_0,		sizeof(dateCalib_0));		// Date of calibration
-		stateEEPROM	= 1;												// S1 to read page 1
-		break;
 
+		stateEEPROM	= 2;
+		break;
 	//////////////////////
 	// S1 - READ PAGE 1 //
 	//////////////////////
 
-	case 1:
+	case 2:
 		EEPROM_Read(1, 0,  nameSensor_1,	sizeof(nameSensor_1));		// Name of sensor
 		EEPROM_Read(1, 20, idSensor_1,		sizeof(idSensor_1));		// ID of sensor
 		EEPROM_Read(1, 24, rangeSensor_1,	sizeof(rangeSensor_1));		// Range of sensor
 		EEPROM_Read(1, 28, amplifier_11,	sizeof(amplifier_11));		// Amplifier 1 of sensor
+		stateEEPROM	= 3;												// S2 to stop of read
+		break;
+
+
+	case 3:
 		EEPROM_Read(1, 32, amplifier_21,	sizeof(amplifier_21));		// Amplifier 2 of sensor
 		EEPROM_Read(1, 36, groundSensor_1,	sizeof(groundSensor_1));	// N of curve
 		EEPROM_Read(1, 40, curveSensor_1,	sizeof(curveSensor_1));		// M of curve
 		EEPROM_Read(1, 44, dateCalib_1,		sizeof(dateCalib_1));		// Date of calibration
-		stateEEPROM	= 2;												// S2 to stop of read
+		stateEEPROM	= 4;
 		break;
 
 	///////////////////////
 	// S2 - CHECK ERRORS //
 	///////////////////////
 
-	case 2:
+	case 4:
+
+		groundAlphaA	= groundSensor_0[0] + (groundSensor_0[1] << 8);
+		curveAlphaA		= curveSensor_0[0] + (curveSensor_0[1] << 8);
+
 		/*
 		for (int i=0; i<512; i++){
 			EEPROM_PageErase(i);
-		}*/
-		/*
+		}
+
 		EEPROM_Write(0, 0, nameSensor0, sizeof(nameSensor0));
 		EEPROM_Write(0, 20, idSensor0, sizeof(idSensor0));
 		EEPROM_Write(0, 24, rangeSensor0, sizeof(rangeSensor0));
@@ -764,14 +779,14 @@ void hwEEPROM(){
 		EEPROM_Write(1, 40, curveSensor1, sizeof(curveSensor0));
 		EEPROM_Write(1, 44, dateCalib1, sizeof(dateCalib0));
 		*/
-		stateEEPROM	= 3;								// Pasa a S3
+		stateEEPROM	= 5;								// Pasa a S3
 		break;
 
 	///////////////////////
 	// S3 - STOP READING //
 	///////////////////////
 
-	case 3:
+	case 5:
 		uint8_t i;										// Inicia contador
 		for (i = 0; i<sizeof(nameAlphaB) ; i++){		// Recorre caracter a caracter
 			if ( nameAlphaB[i]	== nameSensor_0[i] ){	// Compara caracter ideal y caracter leido
@@ -792,10 +807,10 @@ void hwEEPROM(){
 				break;									// Termina loop
 			}
 		}
-		stateEEPROM	= 4;
+		stateEEPROM	= 6;
 		break;
 
-	case 4:
+	case 6:
 		break;
 	default:
 		stateEEPROM	= 0;

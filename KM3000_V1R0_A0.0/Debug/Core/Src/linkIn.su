@@ -1,9 +1,9 @@
-../Core/Src/linkIn.cpp:127:6:void linkInput()	8	static
-../Core/Src/linkIn.cpp:151:6:void linkBattery()	4	static
-../Core/Src/linkIn.cpp:276:6:void linkInLora()	8	static
-../Core/Src/linkIn.cpp:362:6:void linkInGps()	8	static
-../Core/Src/linkIn.cpp:494:6:void linkBoton()	8	static
-../Core/Src/linkIn.cpp:551:9:uint8_t adc2PPM(uint16_t, uint8_t)	24	static
-../Core/Src/linkIn.cpp:610:6:void linkAnalog()	8	static
-../Core/Src/linkIn.cpp:716:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Core/Src/linkIn.cpp:716:1:cpp)	8	static
+../Core/Src/linkIn.cpp:131:6:void linkInput()	8	static
+../Core/Src/linkIn.cpp:155:6:void linkBattery()	4	static
+../Core/Src/linkIn.cpp:280:6:void linkInLora()	8	static
+../Core/Src/linkIn.cpp:366:6:void linkInGps()	8	static
+../Core/Src/linkIn.cpp:498:6:void linkBoton()	8	static
+../Core/Src/linkIn.cpp:555:10:uint16_t adc2PPM(uint16_t, uint8_t)	24	static
+../Core/Src/linkIn.cpp:624:6:void linkAnalog()	8	static
+../Core/Src/linkIn.cpp:730:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/linkIn.cpp:730:1:cpp)	8	static

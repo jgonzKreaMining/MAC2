@@ -155,20 +155,31 @@ void hwEEPROMOut(){
 		EEPROM_Write(0, 20, idSensor0, sizeof(idSensor0));
 		EEPROM_Write(0, 24, rangeSensor0, sizeof(rangeSensor0));
 		EEPROM_Write(0, 28, amplifier1_0, sizeof(amplifier1_0));
+		stateEepromOut	= 2;
+
+		break;
+
+	case 2:
 		EEPROM_Write(0, 32, amplifier2_0, sizeof(amplifier2_0));
 		EEPROM_Write(0, 36, groundSensor0, sizeof(groundSensor0));
 		EEPROM_Write(0, 40, curveSensor0, sizeof(curveSensor0));
 		EEPROM_Write(0, 44, dateCalib0, sizeof(dateCalib0));
+		stateEepromOut	= 3;
+		break;
 
+	case 3:
 		EEPROM_Write(1, 0, nameSensor1, sizeof(nameSensor0));
 		EEPROM_Write(1, 20, idSensor1, sizeof(idSensor1));
 		EEPROM_Write(1, 24, rangeSensor1, sizeof(rangeSensor0));
 		EEPROM_Write(1, 28, amplifier1_1, sizeof(amplifier1_0));
+		stateEepromOut	= 4;
+		break;
+
+	case 4:
 		EEPROM_Write(1, 32, amplifier2_1, sizeof(amplifier2_0));
 		EEPROM_Write(1, 36, groundSensor1, sizeof(groundSensor0));
 		EEPROM_Write(1, 40, curveSensor1, sizeof(curveSensor0));
 		EEPROM_Write(1, 44, dateCalib1, sizeof(dateCalib0));
-
 		stateEepromOut	= 0;
 		break;
 

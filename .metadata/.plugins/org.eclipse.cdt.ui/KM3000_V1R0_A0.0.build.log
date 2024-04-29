@@ -1,18 +1,10 @@
-11:26:27 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
+11:40:34 **** Incremental Build of configuration Debug for project KM3000_V1R0_A0.0 ****
 make -j8 all 
-arm-none-eabi-g++ "../Core/Src/app.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app.d" -MT"Core/Src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app.o"
-arm-none-eabi-g++ -o "KM3000_V1R0_A0.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Krea Mining\MAC2\src\KM3000_V1R0_A0.0\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="KM3000_V1R0_A0.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.100.202403111256/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: KM3000_V1R0_A0.0.elf has a LOAD segment with RWX permissions
-Finished building target: KM3000_V1R0_A0.0.elf
- 
 arm-none-eabi-size  KM3000_V1R0_A0.0.elf 
-arm-none-eabi-objdump -h -S KM3000_V1R0_A0.0.elf  > "KM3000_V1R0_A0.0.list"
    text	   data	    bss	    dec	    hex	filename
-  55228	    968	   5068	  61264	   ef50	KM3000_V1R0_A0.0.elf
+  55344	    968	   5076	  61388	   efcc	KM3000_V1R0_A0.0.elf
 Finished building: default.size.stdout
  
-Finished building: KM3000_V1R0_A0.0.list
- 
 
-11:26:29 Build Finished. 0 errors, 1 warnings. (took 2s.84ms)
+11:40:34 Build Finished. 0 errors, 0 warnings. (took 439ms)
 

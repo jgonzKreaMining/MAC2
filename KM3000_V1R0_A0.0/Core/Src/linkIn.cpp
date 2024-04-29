@@ -6,6 +6,7 @@
  */
 
 #include "link.h"
+#include <math.h>
 #include "stm32l4xx_hal.h"
 
 
@@ -94,8 +95,8 @@ extern uint16_t tempExtern;					// Valor temperatura externa
 extern uint16_t humIntern;					// Valor humedad interno
 extern uint16_t humExtern;					// Valor humedad externo
 
-uint8_t	alpha_A1_PPM;						// Valor en PPM de HCL A1
-uint8_t alpha_B1_PPM;						// Valor en PPM de HCL B1
+uint16_t	alpha_A1_PPM;						// Valor en PPM de HCL A1
+uint16_t alpha_B1_PPM;						// Valor en PPM de HCL B1
 
 uint16_t tempApp;							// Valor final temperatura
 uint16_t humApp;								// Valor final humedad
@@ -111,6 +112,9 @@ bool enableSensors;							// Habilita sensores
 bool flagAlarm_PPM;							// Indica alarma PPM
 bool flagAlarm_Temp;						// Indica alarma temperatura
 bool flagAlarm_Hum;							// Indica alarma Humedad
+
+extern uint16_t groundAlphaA;
+extern uint16_t curveAlphaA;
 
 /////////////
 // BATTERY //
@@ -548,10 +552,8 @@ void linkBoton(){
  *	MODE 4	:	ADC interno B1
  */
 
-uint8_t adc2PPM( uint16_t signal, uint8_t mode){
-	uint8_t result;
-
-	result	= 1;
+uint16_t adc2PPM( uint16_t signal, uint8_t mode){
+	uint16_t result;
 
 	switch ( mode ){
 
@@ -560,6 +562,13 @@ uint8_t adc2PPM( uint16_t signal, uint8_t mode){
 	////////////
 
 	case 1:
+		if ( signal > groundAlphaA){
+			result	= signal - groundAlphaA;
+		}
+		else{
+			result	= 0;
+		}
+		result	= result/curveAlphaA;
 		break;
 
 	////////////
@@ -567,6 +576,7 @@ uint8_t adc2PPM( uint16_t signal, uint8_t mode){
 	////////////
 
 	case 2:
+		result = signal;//(signal - groundAlphaA)/curveAlphaA;
 		break;
 
 	////////////
@@ -581,6 +591,10 @@ uint8_t adc2PPM( uint16_t signal, uint8_t mode){
 	////////////
 
 	case 4:
+		break;
+
+	default:
+		result	= 1;
 		break;
 	}
 
@@ -648,10 +662,10 @@ void linkAnalog(){
 	////////////
 
 	if ( !errorHardware[5] ){										// Si esta habilitado el ADC
-		alpha_A1_PPM = adc2PPM(alphaA, 1) * enableSensors;			// Convierte en PPM
+		alpha_A1_PPM = adc2PPM(alphaA, 1);// * enableSensors;			// Convierte en PPM
 	}
 	else{															// Si no esta habiltiado el ADC
-		alpha_A1_PPM = adc2PPM(alphaAnalog_A, 2) * enableSensors;	// Convierte en PPM
+		alpha_A1_PPM = adc2PPM(alphaAnalog_A, 2); //* enableSensors;	// Convierte en PPM
 	}
 
 	if ( alpha_A1_PPM > 50 && enableSensors){		// Si pasa de 5 ppm
@@ -666,13 +680,13 @@ void linkAnalog(){
 	////////////
 
 	if ( !errorHardware[5] ){										// Si esta habitado el ADC
-		alpha_A1_PPM = adc2PPM(alphaA, 3) * enableSensors;			// Convierte en PPM
+		alpha_B1_PPM = adc2PPM(alphaA, 3) * enableSensors;			// Convierte en PPM
 	}
 	else{															// Si no esta habilitado el ADC
-		alpha_A1_PPM = adc2PPM(alphaAnalog_A, 4) * enableSensors;	// Convierte en PPM
+		alpha_B1_PPM = adc2PPM(alphaAnalog_A, 4) * enableSensors;	// Convierte en PPM
 	}
 
-	if ( alpha_A1_PPM > 50 && enableSensors ){		// Si pasa de 5 ppm
+	if ( alpha_B1_PPM > 50 && enableSensors ){		// Si pasa de 5 ppm
 		flagAlarm_PPM	= 1;						// Indica alarma
 	}
 	else{											// Si no

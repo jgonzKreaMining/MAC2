@@ -23,7 +23,7 @@ void linkInGps();
 void linkBoton();
 void linkAnalog();
 void linkBattery();
-uint8_t adc2PPM( uint16_t signal, uint8_t mode );
+uint16_t adc2PPM( uint16_t signal, uint8_t mode );
 
 ////////////
 // OUTPUT //
