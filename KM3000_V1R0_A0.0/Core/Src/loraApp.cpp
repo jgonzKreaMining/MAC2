@@ -79,12 +79,12 @@ uint8_t radioSetPwr_RN2903[]	= "radio set pwr 20\r\n";
  ***** MAC 1 *****
  *****************
  */
-
+/*
 uint8_t macSetDevEui_RN2903[]	= "mac set deveui 0000004B000004B\r\n";
 uint8_t macSetDevAddr_RN2903[]	= "mac set devaddr 0000004B\r\n";
 uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC7EC\r\n";
 uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC7EC\r\n";
-
+*/
 /*****************
  ***** MAC 2 *****
  *****************
@@ -93,7 +93,7 @@ uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC7
 /*
 uint8_t macSetDevEui_RN2903[]	= "mac set deveui 0000005200000052\r\n";
 uint8_t macSetDevAddr_RN2903[]	= "mac set devaddr 00000052\r\n";
-uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC700\r\n",
+uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC700\r\n";
 uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC700\r\n";
 */
 
@@ -102,12 +102,10 @@ uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC7
  *****************
  */
 
-/*
 uint8_t macSetDevEui_RN2903[]	= "mac set deveui 0000006500000065\r\n";
 uint8_t macSetDevAddr_RN2903[]	= "mac set devaddr 00000065\r\n";
-uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC711\r\n",
+uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC711\r\n";
 uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC711\r\n";
-*/
 
 /*****************
  ***** MAC 4 *****
@@ -117,7 +115,7 @@ uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC7
 /*
 uint8_t macSetDevEui_RN2903[]	= "mac set deveui 0000006100000061\r\n";
 uint8_t macSetDevAddr_RN2903[]	= "mac set devaddr 00000061\r\n";
-uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC722\r\n",
+uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC722\r\n";
 uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC722\r\n";
 */
 
@@ -129,7 +127,7 @@ uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC7
 /*
 uint8_t macSetDevEui_RN2903[]	= "mac set deveui 0000006D0000006D\r\n";
 uint8_t macSetDevAddr_RN2903[]	= "mac set devaddr 0000006D\r\n";
-uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC733\r\n",
+uint8_t macSetNwkskey_RN2903[]	= "mac set nwkskey 237FCD5AE5126C04E2F0809004DCC733\r\n";
 uint8_t macSetAppskey_RN2903[]	= "mac set appskey 237FCD5AE5126C04E2F0809004DCC733\r\n";
 */
 
