@@ -35,7 +35,7 @@ const uint16_t limitTcpLoraOut	= 1000/superloop;	// Limite para enviar comando
 /*****	OUTPUT	*****/
 
 void tcpOutput(){
-	tcpOutLora();
+	//tcpOutLora();
 }
 
 void tcpOutLora(){

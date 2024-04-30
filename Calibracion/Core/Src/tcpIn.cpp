@@ -58,10 +58,10 @@ bool flagSetSys;							// Indica que se debe enviar system
 /*****	INPUT	*****/
 
 void tcpInput(){
-	tcpData();
-	tcpSystem();
-	tcpGps();
-	tcpInLora();
+	//tcpData();
+	//tcpSystem();
+	//tcpGps();
+	//tcpInLora();
 }
 
 /******************

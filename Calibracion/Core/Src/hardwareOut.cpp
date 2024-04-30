@@ -129,8 +129,8 @@ extern uint8_t dateCalib1[10];		// Fecha de calibración
 void hwOutput(){
 	//hwDisplay();
 	//hwAlarms();
-	hwLoraOut();
-	hwGpsOut();
+	//hwLoraOut();
+	//hwGpsOut();
 	hwLedOut();
 	hwEEPROMOut();
 }

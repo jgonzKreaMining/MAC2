@@ -178,6 +178,8 @@ extern bool flagSaveEeprom;
 #define DCgain 8
 #define DCgain2 1
 
+uint32_t countDebug;
+
 /////////
 // APP //
 /////////
@@ -192,6 +194,8 @@ void app(){
 }
 
 void displayCalib(){
+	countDebug++;
+
 	switch(stateProcess){
 	case 0:
 		flagLedOn	= 0;

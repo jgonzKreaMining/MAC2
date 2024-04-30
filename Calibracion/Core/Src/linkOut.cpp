@@ -46,8 +46,8 @@ extern bool flagTxLora;			// Indica que se envía un mensaje
 /***** OUTPUT *****/
 
 void linkOutput(){
-	linkOutLora();
-	linkOutGps();
+	//linkOutLora();
+	//linkOutGps();
 	//linkOutDisplay();
 }
 

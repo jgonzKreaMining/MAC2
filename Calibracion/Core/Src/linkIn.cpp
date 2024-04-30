@@ -125,8 +125,8 @@ uint16_t countBat;						// Contador bateria
 /***** INPUT *****/
 
 void linkInput(){
-	linkInGps();
-	linkInLora();
+	//linkInGps();
+	//linkInLora();
 	linkBoton();
 	linkAnalog();
 	linkBattery();

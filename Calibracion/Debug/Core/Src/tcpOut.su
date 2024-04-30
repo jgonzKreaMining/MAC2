@@ -1,4 +1,4 @@
-../Core/Src/tcpOut.cpp:37:6:void tcpOutput()	8	static
+../Core/Src/tcpOut.cpp:37:6:void tcpOutput()	4	static
 ../Core/Src/tcpOut.cpp:41:6:void tcpOutLora()	8	static
 ../Core/Src/tcpOut.cpp:93:1:void __static_initialization_and_destruction_0(int, int)	16	static
 ../Core/Src/tcpOut.cpp:93:1:cpp)	8	static
