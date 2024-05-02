@@ -1,19 +1,19 @@
 ../Core/Inc/fifoUart.h:18:7:fifoCommands::fifoCommands()	1
 ../Core/Src/main.cpp:220:5:int main()	2
-../Core/Src/main.cpp:329:6:void SystemClock_Config()	4
-../Core/Src/main.cpp:373:6:void MX_IWDG_Init()	2
-../Core/Src/main.cpp:399:13:void MX_ADC1_Init()	6
-../Core/Src/main.cpp:483:13:void MX_I2C1_Init()	4
-../Core/Src/main.cpp:530:13:void MX_TIM6_Init()	3
-../Core/Src/main.cpp:568:13:void MX_UART4_Init()	2
-../Core/Src/main.cpp:603:13:void MX_UART5_Init()	2
-../Core/Src/main.cpp:636:13:void MX_DMA_Init()	1
-../Core/Src/main.cpp:673:13:void MX_GPIO_Init()	1
-../Core/Src/main.cpp:740:6:void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*)	2
-../Core/Src/main.cpp:750:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	3
-../Core/Src/main.cpp:772:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
-../Core/Src/main.cpp:782:6:void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef*)	1
-../Core/Src/main.cpp:787:6:void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef*)	1
-../Core/Src/main.cpp:798:6:void Error_Handler()	1
-../Core/Src/main.cpp:807:1:void __static_initialization_and_destruction_0(int, int)	3
-../Core/Src/main.cpp:807:1:cpp)	1
+../Core/Src/main.cpp:331:6:void SystemClock_Config()	4
+../Core/Src/main.cpp:375:6:void MX_IWDG_Init()	2
+../Core/Src/main.cpp:401:13:void MX_ADC1_Init()	6
+../Core/Src/main.cpp:485:13:void MX_I2C1_Init()	4
+../Core/Src/main.cpp:532:13:void MX_TIM6_Init()	3
+../Core/Src/main.cpp:570:13:void MX_UART4_Init()	2
+../Core/Src/main.cpp:605:13:void MX_UART5_Init()	2
+../Core/Src/main.cpp:638:13:void MX_DMA_Init()	1
+../Core/Src/main.cpp:675:13:void MX_GPIO_Init()	1
+../Core/Src/main.cpp:742:6:void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*)	2
+../Core/Src/main.cpp:752:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	3
+../Core/Src/main.cpp:774:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
+../Core/Src/main.cpp:784:6:void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef*)	1
+../Core/Src/main.cpp:789:6:void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef*)	1
+../Core/Src/main.cpp:800:6:void Error_Handler()	1
+../Core/Src/main.cpp:809:1:void __static_initialization_and_destruction_0(int, int)	3
+../Core/Src/main.cpp:809:1:cpp)	1

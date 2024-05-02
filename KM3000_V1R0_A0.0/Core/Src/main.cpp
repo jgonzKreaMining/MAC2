@@ -264,6 +264,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   setupLoraApp();
 
+
+
   chSetRN2903.addCommand( &macSetCh8 );
   chSetRN2903.addCommand( &macSetCh9 );
   chSetRN2903.addCommand( &macSetCh10 );

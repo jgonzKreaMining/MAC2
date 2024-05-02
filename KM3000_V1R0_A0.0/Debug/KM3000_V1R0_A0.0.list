@@ -9945,6 +9945,8 @@ int main(void)
   setupLoraApp();
  8003dd4:	f7ff fb86 	bl	80034e4 <_Z12setupLoraAppv>
 
+
+
   chSetRN2903.addCommand( &macSetCh8 );
  8003dd8:	4948      	ldr	r1, [pc, #288]	@ (8003efc <main+0x178>)
  8003dda:	4849      	ldr	r0, [pc, #292]	@ (8003f00 <main+0x17c>)
