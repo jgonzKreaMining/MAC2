@@ -8704,7 +8704,7 @@ LOAD D:/ST/STM32CubeIDE_1.15.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_str     0x0011d31e       0x8e ./Core/Src/linkOut.o
                              0x11a2a6 (size before relaxing)
  .debug_str     0x0011d3ac      0x2f3 ./Core/Src/loraApp.o
-                              0x1160f (size before relaxing)
+                              0x1160a (size before relaxing)
  .debug_str     0x0011d69f       0x37 ./Core/Src/loraLink.o
                                0xc903 (size before relaxing)
  .debug_str     0x0011d6d6       0x24 ./Core/Src/loraTcp.o

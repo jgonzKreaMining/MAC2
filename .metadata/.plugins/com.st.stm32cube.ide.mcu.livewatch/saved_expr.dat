@@ -1,11 +1,2 @@
-alphaA
-groundSensor_0
-curveSensor_0
-alphaA_LP
-stateProcess
-alpha_A1_PPM
-alphaAnalog_A
-meanAlphaA
-meanAlphaA_2
-countDebug
-latitud
+loraTxCommand0
+responseLora

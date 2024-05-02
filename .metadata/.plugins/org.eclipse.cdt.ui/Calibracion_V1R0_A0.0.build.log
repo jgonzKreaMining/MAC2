@@ -1,4 +1,4 @@
-12:29:52 **** Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
+09:56:10 **** Incremental Build of configuration Debug for project Calibracion_V1R0_A0.0 ****
 make -j8 all 
 arm-none-eabi-size  Calibracion_V1R0_A0.0.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  Calibracion_V1R0_A0.0.elf
 Finished building: default.size.stdout
  
 
-12:29:52 Build Finished. 0 errors, 0 warnings. (took 376ms)
+09:56:10 Build Finished. 0 errors, 0 warnings. (took 552ms)
 

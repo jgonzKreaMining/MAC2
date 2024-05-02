@@ -5864,337 +5864,337 @@ void linkOutput(){
 	...
 
 080027e0 <_Z12setupLoraAppv>:
+
+rn2903Command macSetCh8;
 rn2903Command macSetCh9;
 rn2903Command macSetCh10;
 
 void setupLoraApp(){
-	///////////////
-	// SYS RESET //
  80027e0:	b480      	push	{r7}
  80027e2:	af00      	add	r7, sp, #0
 	///////////////
+	// SYS RESET //
+	///////////////
 
 	sysReset.command		= sysReset_RN2903;
-	sysReset.size			= sizeof( sysReset_RN2903 );
-	sysReset.responseSize	= 1;
  80027e4:	4b57      	ldr	r3, [pc, #348]	@ (8002944 <_Z12setupLoraAppv+0x164>)
  80027e6:	4a58      	ldr	r2, [pc, #352]	@ (8002948 <_Z12setupLoraAppv+0x168>)
  80027e8:	605a      	str	r2, [r3, #4]
-
+	sysReset.size			= sizeof( sysReset_RN2903 );
  80027ea:	4b56      	ldr	r3, [pc, #344]	@ (8002944 <_Z12setupLoraAppv+0x164>)
  80027ec:	220c      	movs	r2, #12
  80027ee:	701a      	strb	r2, [r3, #0]
-	/***** RADIO *****/
+	sysReset.responseSize	= 1;
  80027f0:	4b54      	ldr	r3, [pc, #336]	@ (8002944 <_Z12setupLoraAppv+0x164>)
  80027f2:	2201      	movs	r2, #1
  80027f4:	721a      	strb	r2, [r3, #8]
+
+	///////////////////
 	// RADIO SET MOD //
 	///////////////////
 
 	radioSetMod.command		= radioSetMod_RN2903;
-	radioSetMod.size		= sizeof( radioSetMod_RN2903 ) - 1;
-	radioSetMod.responseSize= 3;
  80027f6:	4b55      	ldr	r3, [pc, #340]	@ (800294c <_Z12setupLoraAppv+0x16c>)
  80027f8:	4a55      	ldr	r2, [pc, #340]	@ (8002950 <_Z12setupLoraAppv+0x170>)
  80027fa:	605a      	str	r2, [r3, #4]
-
+	radioSetMod.size		= sizeof( radioSetMod_RN2903 ) - 1;
  80027fc:	4b53      	ldr	r3, [pc, #332]	@ (800294c <_Z12setupLoraAppv+0x16c>)
  80027fe:	2214      	movs	r2, #20
  8002800:	701a      	strb	r2, [r3, #0]
-	//////////////////
+	radioSetMod.responseSize= 3;
  8002802:	4b52      	ldr	r3, [pc, #328]	@ (800294c <_Z12setupLoraAppv+0x16c>)
  8002804:	2203      	movs	r2, #3
  8002806:	721a      	strb	r2, [r3, #8]
+
+	//////////////////
 	// RADIO SET SF //
 	//////////////////
 
 	radioSetSf.command		= radioSetSf_RN2903;
-	radioSetSf.size			= sizeof( radioSetSf_RN2903 ) - 1;
-	radioSetSf.responseSize	= 3;
  8002808:	4b52      	ldr	r3, [pc, #328]	@ (8002954 <_Z12setupLoraAppv+0x174>)
  800280a:	4a53      	ldr	r2, [pc, #332]	@ (8002958 <_Z12setupLoraAppv+0x178>)
  800280c:	605a      	str	r2, [r3, #4]
-
+	radioSetSf.size			= sizeof( radioSetSf_RN2903 ) - 1;
  800280e:	4b51      	ldr	r3, [pc, #324]	@ (8002954 <_Z12setupLoraAppv+0x174>)
  8002810:	2213      	movs	r2, #19
  8002812:	701a      	strb	r2, [r3, #0]
-	//////////////////
+	radioSetSf.responseSize	= 3;
  8002814:	4b4f      	ldr	r3, [pc, #316]	@ (8002954 <_Z12setupLoraAppv+0x174>)
  8002816:	2203      	movs	r2, #3
  8002818:	721a      	strb	r2, [r3, #8]
+
+	//////////////////
 	// RADIO SET BW //
 	//////////////////
 
 	radioSetBw.command		= radioSetBw_RN2903;
-	radioSetBw.size			= sizeof( radioSetBw_RN2903 ) - 1;
-	radioSetBw.responseSize = 3;
  800281a:	4b50      	ldr	r3, [pc, #320]	@ (800295c <_Z12setupLoraAppv+0x17c>)
  800281c:	4a50      	ldr	r2, [pc, #320]	@ (8002960 <_Z12setupLoraAppv+0x180>)
  800281e:	605a      	str	r2, [r3, #4]
-
+	radioSetBw.size			= sizeof( radioSetBw_RN2903 ) - 1;
  8002820:	4b4e      	ldr	r3, [pc, #312]	@ (800295c <_Z12setupLoraAppv+0x17c>)
  8002822:	2212      	movs	r2, #18
  8002824:	701a      	strb	r2, [r3, #0]
-	///////////////////
+	radioSetBw.responseSize = 3;
  8002826:	4b4d      	ldr	r3, [pc, #308]	@ (800295c <_Z12setupLoraAppv+0x17c>)
  8002828:	2203      	movs	r2, #3
  800282a:	721a      	strb	r2, [r3, #8]
+
+	///////////////////
 	// RADIO SET PWR //
 	///////////////////
 
 	radioSetPwr.command		= radioSetPwr_RN2903;
-	radioSetPwr.size		= sizeof( radioSetPwr_RN2903 ) - 1;
-	radioSetPwr.responseSize= 3;
  800282c:	4b4d      	ldr	r3, [pc, #308]	@ (8002964 <_Z12setupLoraAppv+0x184>)
  800282e:	4a4e      	ldr	r2, [pc, #312]	@ (8002968 <_Z12setupLoraAppv+0x188>)
  8002830:	605a      	str	r2, [r3, #4]
-
+	radioSetPwr.size		= sizeof( radioSetPwr_RN2903 ) - 1;
  8002832:	4b4c      	ldr	r3, [pc, #304]	@ (8002964 <_Z12setupLoraAppv+0x184>)
  8002834:	2212      	movs	r2, #18
  8002836:	701a      	strb	r2, [r3, #0]
-
+	radioSetPwr.responseSize= 3;
  8002838:	4b4a      	ldr	r3, [pc, #296]	@ (8002964 <_Z12setupLoraAppv+0x184>)
  800283a:	2203      	movs	r2, #3
  800283c:	721a      	strb	r2, [r3, #8]
+
+	////////////////////
 	// MAC SET DEVEUI //
 	////////////////////
 
 	macSetDeveui.command	= macSetDevEui_RN2903;
-	macSetDeveui.size		= sizeof( macSetDevEui_RN2903 ) - 1;
-	macSetDeveui.responseSize	= 3;
  800283e:	4b4b      	ldr	r3, [pc, #300]	@ (800296c <_Z12setupLoraAppv+0x18c>)
  8002840:	4a4b      	ldr	r2, [pc, #300]	@ (8002970 <_Z12setupLoraAppv+0x190>)
  8002842:	605a      	str	r2, [r3, #4]
-
+	macSetDeveui.size		= sizeof( macSetDevEui_RN2903 ) - 1;
  8002844:	4b49      	ldr	r3, [pc, #292]	@ (800296c <_Z12setupLoraAppv+0x18c>)
  8002846:	2220      	movs	r2, #32
  8002848:	701a      	strb	r2, [r3, #0]
-	/////////////////////////
+	macSetDeveui.responseSize	= 3;
  800284a:	4b48      	ldr	r3, [pc, #288]	@ (800296c <_Z12setupLoraAppv+0x18c>)
  800284c:	2203      	movs	r2, #3
  800284e:	721a      	strb	r2, [r3, #8]
+
+	/////////////////////////
 	// MAC SET NETWORK KEY //
 	/////////////////////////
 
 	macSetNwkskey.command	= macSetNwkskey_RN2903;
-	macSetNwkskey.size		= sizeof( macSetNwkskey_RN2903 ) - 1;
-	macSetNwkskey.responseSize	= 3;
  8002850:	4b48      	ldr	r3, [pc, #288]	@ (8002974 <_Z12setupLoraAppv+0x194>)
  8002852:	4a49      	ldr	r2, [pc, #292]	@ (8002978 <_Z12setupLoraAppv+0x198>)
  8002854:	605a      	str	r2, [r3, #4]
-
+	macSetNwkskey.size		= sizeof( macSetNwkskey_RN2903 ) - 1;
  8002856:	4b47      	ldr	r3, [pc, #284]	@ (8002974 <_Z12setupLoraAppv+0x194>)
  8002858:	2232      	movs	r2, #50	@ 0x32
  800285a:	701a      	strb	r2, [r3, #0]
-	//////////////////////
+	macSetNwkskey.responseSize	= 3;
  800285c:	4b45      	ldr	r3, [pc, #276]	@ (8002974 <_Z12setupLoraAppv+0x194>)
  800285e:	2203      	movs	r2, #3
  8002860:	721a      	strb	r2, [r3, #8]
+
+	//////////////////////
 	// MAC SET APPS KEY //
 	//////////////////////
 
 	macSetAppskey.command	= macSetAppskey_RN2903;
-	macSetAppskey.size		= sizeof( macSetAppskey_RN2903 ) - 1;
-	macSetAppskey.responseSize	= 3;
  8002862:	4b46      	ldr	r3, [pc, #280]	@ (800297c <_Z12setupLoraAppv+0x19c>)
  8002864:	4a46      	ldr	r2, [pc, #280]	@ (8002980 <_Z12setupLoraAppv+0x1a0>)
  8002866:	605a      	str	r2, [r3, #4]
-
+	macSetAppskey.size		= sizeof( macSetAppskey_RN2903 ) - 1;
  8002868:	4b44      	ldr	r3, [pc, #272]	@ (800297c <_Z12setupLoraAppv+0x19c>)
  800286a:	2232      	movs	r2, #50	@ 0x32
  800286c:	701a      	strb	r2, [r3, #0]
-	/////////////////////////
+	macSetAppskey.responseSize	= 3;
  800286e:	4b43      	ldr	r3, [pc, #268]	@ (800297c <_Z12setupLoraAppv+0x19c>)
  8002870:	2203      	movs	r2, #3
  8002872:	721a      	strb	r2, [r3, #8]
+
+	/////////////////////////
 	// MAC SET DEV ADDRESS //
 	/////////////////////////
 
 	macSetDevAddr.command		= macSetDevAddr_RN2903;
-	macSetDevAddr.size			= sizeof ( macSetDevAddr_RN2903 ) - 1;
-	macSetDevAddr.responseSize	= 2;
  8002874:	4b43      	ldr	r3, [pc, #268]	@ (8002984 <_Z12setupLoraAppv+0x1a4>)
  8002876:	4a44      	ldr	r2, [pc, #272]	@ (8002988 <_Z12setupLoraAppv+0x1a8>)
  8002878:	605a      	str	r2, [r3, #4]
-
+	macSetDevAddr.size			= sizeof ( macSetDevAddr_RN2903 ) - 1;
  800287a:	4b42      	ldr	r3, [pc, #264]	@ (8002984 <_Z12setupLoraAppv+0x1a4>)
  800287c:	221a      	movs	r2, #26
  800287e:	701a      	strb	r2, [r3, #0]
-	///////////////////
+	macSetDevAddr.responseSize	= 2;
  8002880:	4b40      	ldr	r3, [pc, #256]	@ (8002984 <_Z12setupLoraAppv+0x1a4>)
  8002882:	2202      	movs	r2, #2
  8002884:	721a      	strb	r2, [r3, #8]
+
+	///////////////////
 	// MAC JOIN OTAA //
 	///////////////////
 
 	macJoinOtaa.command			= macJoinOtaa_RN2903;
-	macJoinOtaa.size			= sizeof ( macJoinOtaa_RN2903 ) - 1;
-	macJoinOtaa.responseSize	= 7;
  8002886:	4b41      	ldr	r3, [pc, #260]	@ (800298c <_Z12setupLoraAppv+0x1ac>)
  8002888:	4a41      	ldr	r2, [pc, #260]	@ (8002990 <_Z12setupLoraAppv+0x1b0>)
  800288a:	605a      	str	r2, [r3, #4]
-
+	macJoinOtaa.size			= sizeof ( macJoinOtaa_RN2903 ) - 1;
  800288c:	4b3f      	ldr	r3, [pc, #252]	@ (800298c <_Z12setupLoraAppv+0x1ac>)
  800288e:	220f      	movs	r2, #15
  8002890:	701a      	strb	r2, [r3, #0]
-	//////////////////
+	macJoinOtaa.responseSize	= 7;
  8002892:	4b3e      	ldr	r3, [pc, #248]	@ (800298c <_Z12setupLoraAppv+0x1ac>)
  8002894:	2207      	movs	r2, #7
  8002896:	721a      	strb	r2, [r3, #8]
+
+	//////////////////
 	// MAC JOIN ABP //
 	//////////////////
 
 	macJoinAbp.command		= macJoinAbp_RN2903;
-	macJoinAbp.size			= sizeof( macJoinAbp_RN2903 ) - 1;
-	macJoinAbp.responseSize	= 2;
  8002898:	4b3e      	ldr	r3, [pc, #248]	@ (8002994 <_Z12setupLoraAppv+0x1b4>)
  800289a:	4a3f      	ldr	r2, [pc, #252]	@ (8002998 <_Z12setupLoraAppv+0x1b8>)
  800289c:	605a      	str	r2, [r3, #4]
-
+	macJoinAbp.size			= sizeof( macJoinAbp_RN2903 ) - 1;
  800289e:	4b3d      	ldr	r3, [pc, #244]	@ (8002994 <_Z12setupLoraAppv+0x1b4>)
  80028a0:	220e      	movs	r2, #14
  80028a2:	701a      	strb	r2, [r3, #0]
-	//////////////////
+	macJoinAbp.responseSize	= 2;
  80028a4:	4b3b      	ldr	r3, [pc, #236]	@ (8002994 <_Z12setupLoraAppv+0x1b4>)
  80028a6:	2202      	movs	r2, #2
  80028a8:	721a      	strb	r2, [r3, #8]
+
+	//////////////////
 	// MAC SET SYNC //
 	//////////////////
 
 	macSetSync.command		= macSetSync_RN2903;
-	macSetSync.size			= sizeof( macSetSync_RN2903 ) - 1;
-	macSetSync.responseSize	= 3;
  80028aa:	4b3c      	ldr	r3, [pc, #240]	@ (800299c <_Z12setupLoraAppv+0x1bc>)
  80028ac:	4a3c      	ldr	r2, [pc, #240]	@ (80029a0 <_Z12setupLoraAppv+0x1c0>)
  80028ae:	605a      	str	r2, [r3, #4]
-
+	macSetSync.size			= sizeof( macSetSync_RN2903 ) - 1;
  80028b0:	4b3a      	ldr	r3, [pc, #232]	@ (800299c <_Z12setupLoraAppv+0x1bc>)
  80028b2:	2211      	movs	r2, #17
  80028b4:	701a      	strb	r2, [r3, #0]
-	//////////////
+	macSetSync.responseSize	= 3;
  80028b6:	4b39      	ldr	r3, [pc, #228]	@ (800299c <_Z12setupLoraAppv+0x1bc>)
  80028b8:	2203      	movs	r2, #3
  80028ba:	721a      	strb	r2, [r3, #8]
+
+	//////////////
 	// MAC SAVE //
 	//////////////
 
 	macSave.command			= macSave_RN2903;
-	macSave.size			= sizeof( macSave_RN2903 ) - 1;
-	macSave.responseSize	= 3;
  80028bc:	4b39      	ldr	r3, [pc, #228]	@ (80029a4 <_Z12setupLoraAppv+0x1c4>)
  80028be:	4a3a      	ldr	r2, [pc, #232]	@ (80029a8 <_Z12setupLoraAppv+0x1c8>)
  80028c0:	605a      	str	r2, [r3, #4]
-
+	macSave.size			= sizeof( macSave_RN2903 ) - 1;
  80028c2:	4b38      	ldr	r3, [pc, #224]	@ (80029a4 <_Z12setupLoraAppv+0x1c4>)
  80028c4:	220a      	movs	r2, #10
  80028c6:	701a      	strb	r2, [r3, #0]
-	/////////////////
+	macSave.responseSize	= 3;
  80028c8:	4b36      	ldr	r3, [pc, #216]	@ (80029a4 <_Z12setupLoraAppv+0x1c4>)
  80028ca:	2203      	movs	r2, #3
  80028cc:	721a      	strb	r2, [r3, #8]
+
+	/////////////////
 	// MAC TX DATA //
 	/////////////////
 
 	 macTxData.command		= macTxData_RN2903;
-	 macTxData.size			= sizeof( macTxData_RN2903 ) - 1;
-	 macTxData.responseSize	= 14;
  80028ce:	4b37      	ldr	r3, [pc, #220]	@ (80029ac <_Z12setupLoraAppv+0x1cc>)
  80028d0:	4a37      	ldr	r2, [pc, #220]	@ (80029b0 <_Z12setupLoraAppv+0x1d0>)
  80028d2:	605a      	str	r2, [r3, #4]
-
+	 macTxData.size			= sizeof( macTxData_RN2903 ) - 1;
  80028d4:	4b35      	ldr	r3, [pc, #212]	@ (80029ac <_Z12setupLoraAppv+0x1cc>)
  80028d6:	2219      	movs	r2, #25
  80028d8:	701a      	strb	r2, [r3, #0]
-	 /////////////////
+	 macTxData.responseSize	= 14;
  80028da:	4b34      	ldr	r3, [pc, #208]	@ (80029ac <_Z12setupLoraAppv+0x1cc>)
  80028dc:	220e      	movs	r2, #14
  80028de:	721a      	strb	r2, [r3, #8]
+
+	 /////////////////
 	 // MAC TX DATA //
 	 /////////////////
 
 	 macTxGps.command		= macTxGps_RN2903;
-	 macTxGps.size			= sizeof( macTxGps_RN2903 ) - 1;
-	 macTxGps.responseSize	= 14;
  80028e0:	4b34      	ldr	r3, [pc, #208]	@ (80029b4 <_Z12setupLoraAppv+0x1d4>)
  80028e2:	4a35      	ldr	r2, [pc, #212]	@ (80029b8 <_Z12setupLoraAppv+0x1d8>)
  80028e4:	605a      	str	r2, [r3, #4]
-
+	 macTxGps.size			= sizeof( macTxGps_RN2903 ) - 1;
  80028e6:	4b33      	ldr	r3, [pc, #204]	@ (80029b4 <_Z12setupLoraAppv+0x1d4>)
  80028e8:	2219      	movs	r2, #25
  80028ea:	701a      	strb	r2, [r3, #0]
-
+	 macTxGps.responseSize	= 14;
  80028ec:	4b31      	ldr	r3, [pc, #196]	@ (80029b4 <_Z12setupLoraAppv+0x1d4>)
  80028ee:	220e      	movs	r2, #14
  80028f0:	721a      	strb	r2, [r3, #8]
+
+	 /////////////////
 	 // MAC TX DATA //
 	 /////////////////
 
 	  macTxSys.command		= macTxSys_RN2903;
-	  macTxSys.size			= sizeof( macTxSys_RN2903 ) - 1;
-	  macTxSys.responseSize	= 14;
  80028f2:	4b32      	ldr	r3, [pc, #200]	@ (80029bc <_Z12setupLoraAppv+0x1dc>)
  80028f4:	4a32      	ldr	r2, [pc, #200]	@ (80029c0 <_Z12setupLoraAppv+0x1e0>)
  80028f6:	605a      	str	r2, [r3, #4]
-
+	  macTxSys.size			= sizeof( macTxSys_RN2903 ) - 1;
  80028f8:	4b30      	ldr	r3, [pc, #192]	@ (80029bc <_Z12setupLoraAppv+0x1dc>)
  80028fa:	2215      	movs	r2, #21
  80028fc:	701a      	strb	r2, [r3, #0]
-	  //////////////////
+	  macTxSys.responseSize	= 14;
  80028fe:	4b2f      	ldr	r3, [pc, #188]	@ (80029bc <_Z12setupLoraAppv+0x1dc>)
  8002900:	220e      	movs	r2, #14
  8002902:	721a      	strb	r2, [r3, #8]
+
+	  //////////////////
 	  // MAC SET CH 8 //
 	  //////////////////
 
 	  macSetCh8.command		= macSetCh8_RN2903;
-	  macSetCh8.size		= sizeof( macSetCh8_RN2903 ) - 1;
-	  macSetCh8.responseSize	= 9;
  8002904:	4b2f      	ldr	r3, [pc, #188]	@ (80029c4 <_Z12setupLoraAppv+0x1e4>)
  8002906:	4a30      	ldr	r2, [pc, #192]	@ (80029c8 <_Z12setupLoraAppv+0x1e8>)
  8002908:	605a      	str	r2, [r3, #4]
-
+	  macSetCh8.size		= sizeof( macSetCh8_RN2903 ) - 1;
  800290a:	4b2e      	ldr	r3, [pc, #184]	@ (80029c4 <_Z12setupLoraAppv+0x1e4>)
  800290c:	2219      	movs	r2, #25
  800290e:	701a      	strb	r2, [r3, #0]
-	  //////////////////
+	  macSetCh8.responseSize	= 9;
  8002910:	4b2c      	ldr	r3, [pc, #176]	@ (80029c4 <_Z12setupLoraAppv+0x1e4>)
  8002912:	2209      	movs	r2, #9
  8002914:	721a      	strb	r2, [r3, #8]
+
+	  //////////////////
 	  // MAC SET CH 9 //
 	  //////////////////
 
 	  macSetCh9.command		= macSetCh9_RN2903;
-	  macSetCh9.size		= sizeof( macSetCh9_RN2903 ) - 1;
-	  macSetCh9.responseSize	= 9;
  8002916:	4b2d      	ldr	r3, [pc, #180]	@ (80029cc <_Z12setupLoraAppv+0x1ec>)
  8002918:	4a2d      	ldr	r2, [pc, #180]	@ (80029d0 <_Z12setupLoraAppv+0x1f0>)
  800291a:	605a      	str	r2, [r3, #4]
-
+	  macSetCh9.size		= sizeof( macSetCh9_RN2903 ) - 1;
  800291c:	4b2b      	ldr	r3, [pc, #172]	@ (80029cc <_Z12setupLoraAppv+0x1ec>)
  800291e:	2219      	movs	r2, #25
  8002920:	701a      	strb	r2, [r3, #0]
-	  ///////////////////
+	  macSetCh9.responseSize	= 9;
  8002922:	4b2a      	ldr	r3, [pc, #168]	@ (80029cc <_Z12setupLoraAppv+0x1ec>)
  8002924:	2209      	movs	r2, #9
  8002926:	721a      	strb	r2, [r3, #8]
+
+	  ///////////////////
 	  // MAC SET CH 10 //
 	  ///////////////////
 	  macSetCh10.command		= macSetCh10_RN2903;
-	  macSetCh10.size			= sizeof( macSetCh10_RN2903 ) - 1;
-	  macSetCh10.responseSize	= 9;
  8002928:	4b2a      	ldr	r3, [pc, #168]	@ (80029d4 <_Z12setupLoraAppv+0x1f4>)
  800292a:	4a2b      	ldr	r2, [pc, #172]	@ (80029d8 <_Z12setupLoraAppv+0x1f8>)
  800292c:	605a      	str	r2, [r3, #4]
-
+	  macSetCh10.size			= sizeof( macSetCh10_RN2903 ) - 1;
  800292e:	4b29      	ldr	r3, [pc, #164]	@ (80029d4 <_Z12setupLoraAppv+0x1f4>)
  8002930:	221a      	movs	r2, #26
  8002932:	701a      	strb	r2, [r3, #0]
-}
+	  macSetCh10.responseSize	= 9;
  8002934:	4b27      	ldr	r3, [pc, #156]	@ (80029d4 <_Z12setupLoraAppv+0x1f4>)
  8002936:	2209      	movs	r2, #9
  8002938:	721a      	strb	r2, [r3, #8]
 
-/////////////////
+}
  800293a:	bf00      	nop
  800293c:	46bd      	mov	sp, r7
  800293e:	f85d 7b04 	ldr.w	r7, [sp], #4
@@ -6239,32 +6239,32 @@ void setupLoraApp(){
  80029d8:	200002fc 	.word	0x200002fc
 
 080029dc <_ZN10loraRutine10addCommandEP13rn2903Command>:
+
+/////////////////
 // ADD COMMAND //
 /////////////////
 
 void loraRutine::addCommand ( rn2903Command *command ){
-	this->listCommands[ this->sizeList ]	= command;	// AÑADE PUNTERO A LISTA
-	this->sizeList++;									// Suma 1 al largo de lista
  80029dc:	b480      	push	{r7}
  80029de:	b083      	sub	sp, #12
  80029e0:	af00      	add	r7, sp, #0
  80029e2:	6078      	str	r0, [r7, #4]
  80029e4:	6039      	str	r1, [r7, #0]
-}
+	this->listCommands[ this->sizeList ]	= command;	// AÑADE PUNTERO A LISTA
  80029e6:	687b      	ldr	r3, [r7, #4]
  80029e8:	f893 3191 	ldrb.w	r3, [r3, #401]	@ 0x191
  80029ec:	4619      	mov	r1, r3
  80029ee:	687b      	ldr	r3, [r7, #4]
  80029f0:	683a      	ldr	r2, [r7, #0]
  80029f2:	f843 2021 	str.w	r2, [r3, r1, lsl #2]
-
+	this->sizeList++;									// Suma 1 al largo de lista
  80029f6:	687b      	ldr	r3, [r7, #4]
  80029f8:	f893 3191 	ldrb.w	r3, [r3, #401]	@ 0x191
  80029fc:	3301      	adds	r3, #1
  80029fe:	b2da      	uxtb	r2, r3
  8002a00:	687b      	ldr	r3, [r7, #4]
  8002a02:	f883 2191 	strb.w	r2, [r3, #401]	@ 0x191
-
+}
  8002a06:	bf00      	nop
  8002a08:	370c      	adds	r7, #12
  8002a0a:	46bd      	mov	sp, r7
