@@ -16,6 +16,7 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="inputDisplay"/>
 			<item value="flagUartGps"/>
 			<item value="huart5"/>
 			<item value="stopGps"/>

@@ -78,6 +78,7 @@ int limitEnableDisplay		= 3000/superloop;	//	Limite de display habilitado
 uint8_t stateEnableDisplay;						//	Estado de ME
 
 extern displayPhysical displayPhy;				//	Display
+extern displayLink displayLink;
 
 ////////////
 // ANALOG //
@@ -681,9 +682,11 @@ void linkAnalog(){
 
 	if ( !errorHardware[5] ){										// Si esta habitado el ADC
 		alpha_B1_PPM = adc2PPM(alphaA, 3) * enableSensors;			// Convierte en PPM
+		displayLink.inputDisplay(alpha_B1_PPM, 2);
 	}
 	else{															// Si no esta habilitado el ADC
 		alpha_B1_PPM = adc2PPM(alphaAnalog_A, 4) * enableSensors;	// Convierte en PPM
+		displayLink.inputDisplay(alpha_B1_PPM, 2);
 	}
 
 	if ( alpha_B1_PPM > 50 && enableSensors ){		// Si pasa de 5 ppm

@@ -88,7 +88,7 @@ uint16_t limitUartGps	= 20000/superloop;
 /***** OUTPUT	*****/
 
 void hwOutput(){
-	//hwDisplay();
+	hwDisplay();
 	//hwAlarms();
 	hwLoraOut();
 	hwGpsOut();
