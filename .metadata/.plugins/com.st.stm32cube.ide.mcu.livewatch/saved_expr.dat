@@ -1,2 +1,15 @@
 loraTxCommand0
 responseLora
+alphaA
+alphaB
+alpha_A1_PPM
+alpha_B1_PPM
+groundAlphaA
+curveAlphaA
+groundAlphaB
+curveAlphaB
+latitud
+longitud
+qttyMsgSys
+qttyMsgGps
+qttyMsgData

@@ -1,10 +1,10 @@
-12:00:37 **** Incremental Build of configuration Debug for project Calibracion ****
+10:36:54 **** Incremental Build of configuration Debug for project Calibracion ****
 make -j8 all 
 arm-none-eabi-size  Calibracion.elf 
    text	   data	    bss	    dec	    hex	filename
-  49136	   1000	   5108	  55244	   d7cc	Calibracion.elf
+  49192	    912	   5092	  55196	   d79c	Calibracion.elf
 Finished building: default.size.stdout
  
 
-12:00:37 Build Finished. 0 errors, 0 warnings. (took 622ms)
+10:36:55 Build Finished. 0 errors, 0 warnings. (took 448ms)
 

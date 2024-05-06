@@ -94,6 +94,9 @@ int limitLoraApp = 5000/superloop;
 extern uint8_t macSetCh10_RN2903[];
 uint8_t countChSet;
 
+extern uint16_t alpha_B1_PPM;
+extern uint16_t alpha_A1_PPM;
+
 
 /////////
 // APP //
@@ -175,11 +178,11 @@ void appContent(){
 		a1_HCL	= alphaA/16;
 		b1_HCL	= alphaB/16;
 
-		content[1]	= uint2hex_A(b1_HCL);	// Guarda primeros 4 bits de B1 HCL
-		content[2]	= uint2hex_B(b1_HCL);	// Guarda segundos 4 bits de B1 HCL
+		content[1]	= uint2hex_A(alpha_B1_PPM);	// Guarda primeros 4 bits de B1 HCL
+		content[2]	= uint2hex_B(alpha_B1_PPM);	// Guarda segundos 4 bits de B1 HCL
 
-		content[3]	= uint2hex_A(a1_HCL);	// Guarda primeros 4 bits de A1 HCL
-		content[4] 	= uint2hex_B(a1_HCL);	// Guarda segundos 4 bits de A1 HCL
+		content[3]	= uint2hex_A(alpha_A1_PPM);	// Guarda primeros 4 bits de A1 HCL
+		content[4] 	= uint2hex_B(alpha_A1_PPM);	// Guarda segundos 4 bits de A1 HCL
 
 		content[5]	= uint2hex_A(tempApp);	// Guarda primeros 4 bits de Temperatura
 		content[6]  = uint2hex_B(tempApp);	// Guarda segundos 4 bits de Temperatura

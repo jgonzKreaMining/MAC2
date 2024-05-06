@@ -1,2 +1,0 @@
-../Core/Src/hardwareOut.cpp:23:6:void hwOutput()	4	static
-../Core/Src/hardwareOut.cpp:35:6:void hwDisplay()	8	static

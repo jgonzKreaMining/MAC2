@@ -1,2 +1,0 @@
-../Core/Src/linkOut.cpp:27:6:void linkOutput()	4	static
-../Core/Src/linkOut.cpp:40:6:void linkOutDisplay()	8	static

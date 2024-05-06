@@ -1,8 +1,0 @@
-../Core/Src/hardwareIn.cpp:191:6:void hwInput()	1
-../Core/Src/hardwareIn.cpp:212:6:void hwAds1115()	13
-../Core/Src/hardwareIn.cpp:337:6:void hwSht31()	15
-../Core/Src/hardwareIn.cpp:485:6:void hwBoton()	9
-../Core/Src/hardwareIn.cpp:554:6:void hwAnalog()	7
-../Core/Src/hardwareIn.cpp:645:6:void hwEEPROM()	10
-../Core/Src/hardwareIn.cpp:747:1:void __static_initialization_and_destruction_0(int, int)	3
-../Core/Src/hardwareIn.cpp:747:1:cpp)	1

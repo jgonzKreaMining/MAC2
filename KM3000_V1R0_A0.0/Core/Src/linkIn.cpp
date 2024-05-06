@@ -37,7 +37,7 @@ uint8_t stateGpsLink;						// Estado de la maquina
 bool gpsNewMessage;							// Indicador nuevo mensaje
 
 long int countGpsLink;						// Contador de limite esperando mensajes validos
-long int limitGpsLink	= 240000/superloop;	// Limite de tiempo esperando mensajes validos
+long int limitGpsLink	= 360000/superloop;	// Limite de tiempo esperando mensajes validos
 
 uint8_t countValidMsgGps;					// Contador de mensajes validos
 uint8_t countInvalidMsgGps;					// Contador de mensajes invalidos
@@ -96,7 +96,7 @@ extern uint16_t tempExtern;					// Valor temperatura externa
 extern uint16_t humIntern;					// Valor humedad interno
 extern uint16_t humExtern;					// Valor humedad externo
 
-uint16_t	alpha_A1_PPM;						// Valor en PPM de HCL A1
+uint16_t alpha_A1_PPM;						// Valor en PPM de HCL A1
 uint16_t alpha_B1_PPM;						// Valor en PPM de HCL B1
 
 uint16_t tempApp;							// Valor final temperatura
@@ -116,6 +116,8 @@ bool flagAlarm_Hum;							// Indica alarma Humedad
 
 extern uint16_t groundAlphaA;
 extern uint16_t curveAlphaA;
+extern uint16_t groundAlphaB;
+extern uint16_t curveAlphaB;
 
 /////////////
 // BATTERY //
@@ -585,6 +587,13 @@ uint16_t adc2PPM( uint16_t signal, uint8_t mode){
 	////////////
 
 	case 3:
+		if ( signal > groundAlphaB){
+			result	= signal - groundAlphaB;
+		}
+		else{
+			result	= 0;
+		}
+		result	= result/curveAlphaB;
 		break;
 
 	////////////
@@ -592,10 +601,17 @@ uint16_t adc2PPM( uint16_t signal, uint8_t mode){
 	////////////
 
 	case 4:
+		if ( signal > groundAlphaB){
+			result	= signal - groundAlphaB;
+		}
+		else{
+			result	= 0;
+		}
+		result	= result/curveAlphaB;
 		break;
 
 	default:
-		result	= 1;
+		result	= 0;
 		break;
 	}
 
@@ -681,11 +697,11 @@ void linkAnalog(){
 	////////////
 
 	if ( !errorHardware[5] ){										// Si esta habitado el ADC
-		alpha_B1_PPM = adc2PPM(alphaA, 3) * enableSensors;			// Convierte en PPM
+		alpha_B1_PPM = adc2PPM(alphaB, 3); //* enableSensors;			// Convierte en PPM
 		displayLink.inputDisplay(alpha_B1_PPM, 2);
 	}
 	else{															// Si no esta habilitado el ADC
-		alpha_B1_PPM = adc2PPM(alphaAnalog_A, 4) * enableSensors;	// Convierte en PPM
+		alpha_B1_PPM = adc2PPM(alphaAnalog_B, 4); //* enableSensors;	// Convierte en PPM
 		displayLink.inputDisplay(alpha_B1_PPM, 2);
 	}
 

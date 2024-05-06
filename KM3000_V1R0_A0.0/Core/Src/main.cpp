@@ -264,8 +264,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   setupLoraApp();
 
-
-
   chSetRN2903.addCommand( &macSetCh8 );
   chSetRN2903.addCommand( &macSetCh9 );
   chSetRN2903.addCommand( &macSetCh10 );
@@ -318,8 +316,8 @@ int main(void)
 	  flagSuperloop	= 0;		// REINICIA FLAG
 
 	  HAL_ResumeTick();
-	  HAL_IWDG_Refresh(&hiwdg);
 
+	  HAL_IWDG_Refresh(&hiwdg);
   }
   /* USER CODE END 3 */
 }
@@ -381,8 +379,8 @@ void MX_IWDG_Init(void)
   /* Initialize the IWDG peripheral */
   hiwdg.Instance = IWDG;
   hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
-  hiwdg.Init.Reload = 399;
-  hiwdg.Init.Window	= 390;
+  hiwdg.Init.Reload = 1399;
+  hiwdg.Init.Window	= 1390;
 
   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
   {

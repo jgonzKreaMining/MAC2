@@ -115,6 +115,9 @@ uint8_t stateAnalog;				// Estado de la máquina
 uint16_t groundAlphaA;
 uint16_t curveAlphaA;
 
+uint16_t groundAlphaB;
+uint16_t curveAlphaB;
+
 /** Valores fijos **/
 
 extern uint8_t nameSensor0[20];		// Nombre del dispositivo
@@ -753,8 +756,11 @@ void hwEEPROM(){
 
 	case 4:
 
-		groundAlphaA	= groundSensor_0[0] + (groundSensor_0[1] << 8);
-		curveAlphaA		= curveSensor_0[0] + (curveSensor_0[1] << 8);
+		groundAlphaB	= groundSensor_0[0] + (groundSensor_0[1] << 8);
+		curveAlphaB		= curveSensor_0[0] + (curveSensor_0[1] << 8);
+
+		groundAlphaA	= groundSensor_1[0] + (groundSensor_1[1] << 8);
+		curveAlphaA		= curveSensor_1[0] + (curveSensor_1[1] << 8);
 
 		/*
 		for (int i=0; i<512; i++){

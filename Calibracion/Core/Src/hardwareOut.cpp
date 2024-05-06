@@ -151,10 +151,11 @@ void hwEEPROMOut(){
 		break;
 
 	case 1:
+		/*
 		EEPROM_Write(0, 0, nameSensor0, sizeof(nameSensor0));
 		EEPROM_Write(0, 20, idSensor0, sizeof(idSensor0));
 		EEPROM_Write(0, 24, rangeSensor0, sizeof(rangeSensor0));
-		EEPROM_Write(0, 28, amplifier1_0, sizeof(amplifier1_0));
+		EEPROM_Write(0, 28, amplifier1_0, sizeof(amplifier1_0));*/
 		stateEepromOut	= 2;
 
 		break;
@@ -167,11 +168,11 @@ void hwEEPROMOut(){
 		stateEepromOut	= 3;
 		break;
 
-	case 3:
+	case 3:/*
 		EEPROM_Write(1, 0, nameSensor1, sizeof(nameSensor0));
 		EEPROM_Write(1, 20, idSensor1, sizeof(idSensor1));
 		EEPROM_Write(1, 24, rangeSensor1, sizeof(rangeSensor0));
-		EEPROM_Write(1, 28, amplifier1_1, sizeof(amplifier1_0));
+		EEPROM_Write(1, 28, amplifier1_1, sizeof(amplifier1_0));*/
 		stateEepromOut	= 4;
 		break;
 

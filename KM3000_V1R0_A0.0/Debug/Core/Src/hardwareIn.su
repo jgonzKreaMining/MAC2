@@ -1,10 +1,10 @@
-../Core/Src/hardwareIn.cpp:211:6:void hwInput()	8	static
-../Core/Src/hardwareIn.cpp:232:6:void hwLoraIn()	8	static
-../Core/Src/hardwareIn.cpp:250:6:void hwAds1115()	8	static
-../Core/Src/hardwareIn.cpp:375:6:void hwSht31()	8	static
-../Core/Src/hardwareIn.cpp:523:6:void hwBoton()	8	static
-../Core/Src/hardwareIn.cpp:593:6:void hwGpsIn()	8	static
-../Core/Src/hardwareIn.cpp:614:6:void hwAnalog()	8	static
-../Core/Src/hardwareIn.cpp:705:6:void hwEEPROM()	16	static
-../Core/Src/hardwareIn.cpp:819:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Core/Src/hardwareIn.cpp:819:1:cpp)	8	static
+../Core/Src/hardwareIn.cpp:214:6:void hwInput()	8	static
+../Core/Src/hardwareIn.cpp:235:6:void hwLoraIn()	8	static
+../Core/Src/hardwareIn.cpp:253:6:void hwAds1115()	8	static
+../Core/Src/hardwareIn.cpp:378:6:void hwSht31()	8	static
+../Core/Src/hardwareIn.cpp:526:6:void hwBoton()	8	static
+../Core/Src/hardwareIn.cpp:596:6:void hwGpsIn()	8	static
+../Core/Src/hardwareIn.cpp:617:6:void hwAnalog()	8	static
+../Core/Src/hardwareIn.cpp:708:6:void hwEEPROM()	16	static
+../Core/Src/hardwareIn.cpp:825:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/hardwareIn.cpp:825:1:cpp)	8	static

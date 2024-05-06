@@ -52,7 +52,7 @@ bool flagSetData;							// Indica que se debe enviar datos
 
 uint8_t stateTcpSys;						// Estado TCP system
 uint32_t countTcpSys;						// Contador tcp system
-uint32_t limitTcpSys	= 21600000/superloop;	// Limite para fijar datos system
+uint32_t limitTcpSys	= 360000/superloop;//21600000/superloop;	// Limite para fijar datos system
 bool flagSetSys;							// Indica que se debe enviar system
 
 /*****	INPUT	*****/

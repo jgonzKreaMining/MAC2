@@ -117,20 +117,21 @@ const uint32_t limitProcess	= 20000/superloop;	//
 bool flagResetProcess;							//
 bool flagStability;
 
-
-
 extern uint16_t alphaA;
 extern uint16_t alphaB;
 extern uint16_t alphaAnalog_A;
 extern uint16_t alphaAnalog_B;
 
 uint16_t alphaA_LP;
-int alphaA_BP;
+uint16_t alphaB_LP;
 
 extern uint8_t stateAdc;
 
 uint16_t meanAlphaA;
 uint16_t meanAlphaA_2;
+
+uint16_t meanAlphaB;
+uint16_t meanAlphaB_2;
 
 extern bool flagBoton;
 
@@ -156,6 +157,8 @@ uint16_t bufferStabA[ 30 ];
 
 extern uint8_t groundSensor0[5];
 extern uint8_t curveSensor0[5];
+extern uint8_t groundSensor1[5];
+extern uint8_t curveSensor1[5];
 
 /////////////
 // DISPLAY //
@@ -297,7 +300,8 @@ void displayCalib(){
 void stability(){
 	if ( stateAdc == 5 ){				// Si se toma una muestra
 		alphaA_LP	= iir(alphaA);		// Inserta en filtro pasabajos
-		alphaA_BP	= iir3(alphaA);		// Inserta en filtro pasabanda
+		alphaB_LP	= iir2(alphaB);		//
+		//alphaA_BP	= iir3(alphaA);		// Inserta en filtro pasabanda
 	}
 
 	switch( stateStability ){
@@ -338,7 +342,7 @@ void stability(){
 	////////////////////
 	case 2:
 		if ( stateAdc == 5 ){							// Si llega un dato
-			bufferStabA[ countStability2 ]	= alphaA;	// Guarda valor bruto
+			bufferStabA[ countStability2 ]	= alphaB;	// Guarda valor bruto
 			countStability2++;							// Suma 1
 		}
 
@@ -354,7 +358,7 @@ void stability(){
 
 	case 3:
 		for ( countStability2 = 0; countStability2 < sizeBufStab; countStability2++ ){	// Recorre el buffer
-			if ( fabs(bufferStabA[ countStability2 ] - alphaA_LP) < limitStability){	// Si la diferencia entre la muestra y valor Mean es menor al limite de stabilidad
+			if ( fabs(bufferStabA[ countStability2 ] - alphaB_LP) < limitStability){	// Si la diferencia entre la muestra y valor Mean es menor al limite de stabilidad
 				flagStability	= 1;													// Marca que es estable
 			}
 			else{																		// Si no
@@ -452,6 +456,7 @@ void process(){
 		if ( countProcess >= limitProcess){		// Si se llega al limite de tiempo
 			countProcess		= 0;			// Reinicia contador
 			meanAlphaA			= alphaA_LP;	// Guarda valor en filtro
+			meanAlphaB			= alphaB_LP;
 			flagStartStability	= 1;			//
 			stateProcess		= 3;			// Pasa a S3
 		}
@@ -469,6 +474,7 @@ void process(){
 
 		if ( flagFinishStab && flagStability){			// Si es estable
 			meanAlphaA		= alphaA_LP;				//
+			meanAlphaB		= alphaB_LP;
 			stateProcess	= 5;						// Pasa a S5
 		}
 		else if ( flagFinishStab && !flagStability){	// Si es inestable
@@ -512,7 +518,7 @@ void process(){
 	case 6:
 		countProcess++;										// Suma 1 al contador
 
-		if (alphaA_LP - meanAlphaA >= limitGrowHcl ){ 	// Si se detecta increento
+		if (alphaB_LP - meanAlphaB >= limitGrowHcl ){ 	// Si se detecta increento
 			flagStartStability	= 1;
 			countProcess	= 0;							// Reinicia contador
 			stateProcess	= 7;							// Pasa a S7
@@ -536,16 +542,27 @@ void process(){
 
 		if ( flagFinishStab && flagStability){				// Si es estable
 			meanAlphaA_2	= (alphaA_LP - meanAlphaA)/50;	//
+			meanAlphaB_2	= (alphaB_LP - meanAlphaB)/50;	//
 
-			groundSensor0[0]	= meanAlphaA & 0xFF;		//
-			groundSensor0[1]	= meanAlphaA >> 8;			//
+			groundSensor0[0]	= meanAlphaB & 0xFF;		//
+			groundSensor0[1]	= (meanAlphaB >> 8) & 0xFF;	//
 			groundSensor0[2]	= 0;						//
 			groundSensor0[3]	= 0;						//
 
-			curveSensor0[0]		=  meanAlphaA_2 & 0xFF;	//
-			curveSensor0[1]		=  meanAlphaA_2 >> 8;	//
-			curveSensor0[2]		= 0;					//
-			curveSensor0[3]		= 0;					//
+			curveSensor0[0]		= meanAlphaB_2 & 0xFF;			//
+			curveSensor0[1]		= (meanAlphaB_2 >> 8) & 0xFF;	//
+			curveSensor0[2]		= 0;							//
+			curveSensor0[3]		= 0;							//
+
+			groundSensor1[0]	= meanAlphaA & 0xFF;		//
+			groundSensor1[1]	= (meanAlphaA >> 8) & 0xFF;	//
+			groundSensor1[2]	= 0;						//
+			groundSensor1[3]	= 0;						//
+
+			curveSensor1[0]		= meanAlphaA_2 & 0xFF;			//
+			curveSensor1[1]		= (meanAlphaA_2 >> 8) & 0xFF;	//
+			curveSensor1[2]		= 0;							//
+			curveSensor1[3]		= 0;							//
 
 			flagSaveEeprom	= 1;						//
 			countProcess	= 0;						//
@@ -1247,38 +1264,38 @@ __int16_t iir(__int16_t NewSample) {
 
 __int16_t iir2(__int16_t NewSample) {
     __int16_t ACoef2[NCoef+1] = {
-        16207,
-        -32415,
-        16207
+         8294,
+        16588,
+         8294
     };
 
     __int16_t BCoef2[NCoef+1] = {
         16384,
-        -32412,
-        16031
+        -17567,
+         5330
     };
 
     static __int32_t y2[NCoef+1]; //output samples
     //Warning!!!!!! This variable should be signed (input sample width + Coefs width + 2 )-bit width to avoid saturation.
 
     static __int16_t x2[NCoef+1]; //input samples
-    int n;
+    int n2;
 
     //shift the old samples
-    for(n=NCoef; n>0; n--) {
-       x2[n] = x2[n-1];
-       y2[n] = y2[n-1];
+    for(n2=NCoef; n2>0; n2--) {
+       x2[n2] = x2[n2-1];
+       y2[n2] = y2[n2-1];
     }
 
     //Calculate the new output
     x2[0] = NewSample;
     y2[0] = ACoef2[0] * x2[0];
-    for(n=1; n<=NCoef; n++)
-        y2[0] += ACoef2[n] * x2[n] - BCoef2[n] * y2[n];
+    for(n2=1; n2<=NCoef; n2++)
+        y2[0] += ACoef2[n2] * x2[n2] - BCoef2[n2] * y2[n2];
 
     y2[0] /= BCoef2[0];
 
-    return y2[0] / DCgain2;
+    return y2[0] / DCgain;
 }
 
 

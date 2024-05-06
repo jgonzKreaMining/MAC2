@@ -1,7 +1,0 @@
-../Core/Src/linkIn.cpp:75:6:void linkInput()	1
-../Core/Src/linkIn.cpp:97:6:void linkBattery()	13
-../Core/Src/linkIn.cpp:207:6:void linkBoton()	5
-../Core/Src/linkIn.cpp:263:9:uint8_t adc2PPM(uint16_t, uint8_t)	1
-../Core/Src/linkIn.cpp:322:6:void linkAnalog()	13
-../Core/Src/linkIn.cpp:394:1:void __static_initialization_and_destruction_0(int, int)	3
-../Core/Src/linkIn.cpp:394:1:cpp)	1
