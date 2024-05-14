@@ -1,0 +1,19 @@
+../Core/Src/7segments.cpp:28:9:uint8_t displayLink::dotPosition()	1
+../Core/Src/7segments.cpp:37:6:void displayLink::inputDisplay(int, uint8_t)	1
+../Core/Src/7segments.cpp:50:9:uint8_t displayLink::numberInDigit(uint8_t)	5
+../Core/Src/7segments.cpp:96:6:void displayPhysical::enable(bool)	2
+../Core/Src/7segments.cpp:109:6:void displayPhysical::setDot(uint8_t)	1
+../Core/Src/7segments.cpp:117:9:uint8_t displayPhysical::next()	1
+../Core/Src/7segments.cpp:125:6:void displayPhysical::setNumber(uint8_t)	17
+../Core/Src/7segments.cpp:302:6:bool displayPhysical::firstNumber()	1
+../Core/Src/7segments.cpp:310:6:bool displayPhysical::secondNumber()	1
+../Core/Src/7segments.cpp:318:6:bool displayPhysical::thirdNumber()	1
+../Core/Src/7segments.cpp:326:6:bool displayPhysical::fourthNumber()	1
+../Core/Src/7segments.cpp:334:6:bool displayPhysical::aLed()	1
+../Core/Src/7segments.cpp:342:6:bool displayPhysical::bLed()	1
+../Core/Src/7segments.cpp:350:6:bool displayPhysical::cLed()	1
+../Core/Src/7segments.cpp:358:6:bool displayPhysical::dLed()	1
+../Core/Src/7segments.cpp:366:6:bool displayPhysical::eLed()	1
+../Core/Src/7segments.cpp:374:6:bool displayPhysical::fLed()	1
+../Core/Src/7segments.cpp:382:6:bool displayPhysical::gLed()	1
+../Core/Src/7segments.cpp:390:6:bool displayPhysical::dpLed()	1

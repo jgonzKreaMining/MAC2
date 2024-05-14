@@ -1,0 +1,14 @@
+../Core/Src/loraTcp.cpp:33:6:void loraSelect::setCommand(uint8_t*, uint8_t, uint8_t)	24	static
+../Core/Src/loraTcp.cpp:44:6:void loraSelect::enable(bool)	16	static
+../Core/Src/loraTcp.cpp:52:6:bool loraSelect::newCommand()	24	static
+../Core/Src/loraTcp.cpp:64:10:uint8_t* loraSelect::getCommand()	16	static
+../Core/Src/loraTcp.cpp:72:9:uint8_t loraSelect::getCommandSize()	16	static
+../Core/Src/loraTcp.cpp:80:9:uint8_t loraSelect::qttyResponses()	16	static
+../Core/Src/loraTcp.cpp:104:6:void loraDecision::setRetries(uint8_t)	16	static
+../Core/Src/loraTcp.cpp:113:6:void loraDecision::response(uint8_t)	16	static
+../Core/Src/loraTcp.cpp:163:6:void loraDecision::reset()	16	static
+../Core/Src/loraTcp.cpp:170:6:void loraDecision::disable()	16	static
+../Core/Src/loraTcp.cpp:174:6:bool loraDecision::enable()	16	static
+../Core/Src/loraTcp.cpp:182:6:bool loraDecision::correct()	16	static
+../Core/Src/loraTcp.cpp:190:6:bool loraDecision::burn()	16	static
+../Core/Src/loraTcp.cpp:199:6:bool loraDecision::repeat()	16	static

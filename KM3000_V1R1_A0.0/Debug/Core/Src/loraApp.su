@@ -1,0 +1,5 @@
+../Core/Src/loraApp.cpp:175:6:void setupLoraApp()	4	static
+../Core/Src/loraApp.cpp:340:6:void loraRutine::addCommand(rn2903Command*)	16	static
+../Core/Src/loraApp.cpp:350:16:rn2903Command* loraRutine::command()	24	static
+../Core/Src/loraApp.cpp:366:6:void loraRutine::reset()	16	static
+../Core/Src/loraApp.cpp:374:6:bool loraRutine::finish()	16	static
