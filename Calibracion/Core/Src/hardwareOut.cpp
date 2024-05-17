@@ -127,7 +127,7 @@ extern uint8_t dateCalib1[10];		// Fecha de calibración
 /***** OUTPUT	*****/
 
 void hwOutput(){
-	//hwDisplay();
+	hwDisplay();
 	//hwAlarms();
 	//hwLoraOut();
 	//hwGpsOut();
@@ -605,6 +605,7 @@ void hwDisplay(){
 	// FIRST DIGIT //
 	/////////////////
 
+
 	if ( displayPhy.firstNumber() ){
 		HAL_GPIO_WritePin(GPIOE, GPIO_PIN_0, GPIO_PIN_SET);
 	}
@@ -650,6 +651,7 @@ void hwDisplay(){
 	///////////
 	// A LED //
 	///////////
+
 
 	if ( displayPhy.aLed() ){
 		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_8,  GPIO_PIN_SET);

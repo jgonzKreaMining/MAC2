@@ -500,7 +500,7 @@ void linkBoton(){
 	//////////////////////
 
 	case 0:
-		displayPhy.enable(0);			//	Inhabilita display
+		displayPhy.enable(1);			//	Inhabilita display
 		countEnableDisplay	= 0;		//	Reinicia contador
 
 		if ( flagBoton ){				//	Si se presiona el boton
