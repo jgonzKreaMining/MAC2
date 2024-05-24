@@ -1,3 +1,4 @@
+C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235\tools\arm-none-eabi\include\c++\11.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
 ../Core/Src/tcpOut.cpp:37:6:void tcpOutput()	4	static
 ../Core/Src/tcpOut.cpp:41:6:void tcpOutLora()	8	static
 ../Core/Src/tcpOut.cpp:93:1:void __static_initialization_and_destruction_0(int, int)	16	static

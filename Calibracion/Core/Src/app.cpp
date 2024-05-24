@@ -12,6 +12,7 @@
 #include <loraLink.h>
 #include <math.h>
 #include "fifoUart.h"
+#include <7segments.h>
 
 ///////////////
 // SUPERLOOP //
@@ -144,7 +145,7 @@ uint32_t countStability;
 uint8_t countStability2;
 uint8_t countStability3;
 
-const uint16_t limitGrowHcl		= 500;
+const uint16_t limitGrowHcl		= 1334;
 
 const uint32_t limitStability	= 20000/superloop;
 const uint8_t limitRetStab		= 6;
@@ -171,6 +172,8 @@ extern bool flagLedOff;
 extern bool flagLedFreq;
 extern bool flagSaveEeprom;
 
+extern displayLink displayLink;
+
 ////////////
 // FILTER //
 ////////////
@@ -188,7 +191,7 @@ uint32_t countDebug;
 /////////
 
 void app(){
-	warming();
+	warming();//reloj
 	stability();
 	process();
 	displayCalib();
@@ -207,6 +210,7 @@ void displayCalib(){
 		break;
 
 	case 1:
+		displayLink.inputDisplay(1, 0);
 		flagLedOn	= 0;
 		flagLedOff	= 0;
 		flagLedFreq	= 1;
@@ -218,18 +222,21 @@ void displayCalib(){
 		break;
 
 	case 2:
+		displayLink.inputDisplay(2, 0);
 		flagLedOn	= 0;
 		flagLedOff	= 0;
 		flagLedFreq	= 1;
 		break;
 
 	case 3:
+		displayLink.inputDisplay(3, 0);
 		flagLedOn	= 0;
 		flagLedOff	= 0;
 		flagLedFreq	= 1;
 		break;
 
 	case 4:
+		displayLink.inputDisplay(9999, 0);
 		flagLedOn	= 1;
 		flagLedOff	= 0;
 		flagLedFreq	= 0;
@@ -241,6 +248,7 @@ void displayCalib(){
 		break;
 
 	case 5:
+		displayLink.inputDisplay(5, 0);
 		flagLedOn	= 0;
 		flagLedOff	= 1;
 		flagLedFreq	= 0;
@@ -252,6 +260,7 @@ void displayCalib(){
 		break;
 
 	case 6:
+		displayLink.inputDisplay(6, 0);
 		flagLedOn	= 0;
 		flagLedOff	= 0;
 		flagLedFreq	= 1;
@@ -267,6 +276,7 @@ void displayCalib(){
 		break;
 
 	case 7:
+		displayLink.inputDisplay(7, 0);
 		flagLedOn	= 0;
 		flagLedOff	= 0;
 		flagLedFreq	= 1;
@@ -278,6 +288,7 @@ void displayCalib(){
 		break;
 
 	case 8:
+		displayLink.inputDisplay(8, 0);
 		flagLedOn	= 1;
 		flagLedOff	= 0;
 		flagLedFreq	= 0;
@@ -523,7 +534,7 @@ void process(){
 			countProcess	= 0;							// Reinicia contador
 			stateProcess	= 7;							// Pasa a S7
 		}
-		else if ( countProcess >= limitProcess*2 ){			// Si no se detecta crecimiento
+		else if ( countProcess >= limitProcess*6 ){			// Si no se detecta crecimiento
 			countProcess		= 0;						// Reinicia contador
 			stateProcess		= 4;						// Pasa a S4 - ERROR
 		}
