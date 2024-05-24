@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Calibracion,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:KM3000_V1R0_A0.0,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:KM3000_V1R0_A0.0 Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:KM3000_V1R0_A0.0,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:KM3000_V1R0_A0.0 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:KM3000_V1R1_A0.0,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Calibracion
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Calibracion/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Calibracion/activeLaunchTarget=null\:---

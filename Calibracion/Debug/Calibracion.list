@@ -3331,7 +3331,7 @@ void hwAds1115(){
  8001886:	781b      	ldrb	r3, [r3, #0]
  8001888:	2b00      	cmp	r3, #0
  800188a:	d00c      	beq.n	80018a6 <_Z9hwAds1115v+0x122>
-			alphaA = ( buffer_ADS_I2C_IN[0] << 8 | buffer_ADS_I2C_IN[1] );				// Guarda en Alpha0
+			alphaB = ( buffer_ADS_I2C_IN[0] << 8 | buffer_ADS_I2C_IN[1] );				// Guarda en Alpha0
  800188c:	4b22      	ldr	r3, [pc, #136]	@ (8001918 <_Z9hwAds1115v+0x194>)
  800188e:	781b      	ldrb	r3, [r3, #0]
  8001890:	021b      	lsls	r3, r3, #8
@@ -3347,7 +3347,7 @@ void hwAds1115(){
  80018a4:	e00b      	b.n	80018be <_Z9hwAds1115v+0x13a>
 		}
 		else{																			// Si esta seleccionado channel 1
-			alphaB = ( buffer_ADS_I2C_IN[0] << 8 | buffer_ADS_I2C_IN[1] );				// Guarda en Alpha1
+			alphaA = ( buffer_ADS_I2C_IN[0] << 8 | buffer_ADS_I2C_IN[1] );				// Guarda en Alpha1
  80018a6:	4b1c      	ldr	r3, [pc, #112]	@ (8001918 <_Z9hwAds1115v+0x194>)
  80018a8:	781b      	ldrb	r3, [r3, #0]
  80018aa:	021b      	lsls	r3, r3, #8
@@ -3410,8 +3410,8 @@ void hwAds1115(){
  8001910:	20000500 	.word	0x20000500
  8001914:	20000460 	.word	0x20000460
  8001918:	20000468 	.word	0x20000468
- 800191c:	2000046a 	.word	0x2000046a
- 8001920:	2000046c 	.word	0x2000046c
+ 800191c:	2000046c 	.word	0x2000046c
+ 8001920:	2000046a 	.word	0x2000046a
 
 08001924 <_Z7hwSht31v>:
  *	OUTPUT	: 	tempIntern, tempExtern
@@ -4087,14 +4087,14 @@ void hwAnalog(){
  8001d28:	b29a      	uxth	r2, r3
  8001d2a:	4b13      	ldr	r3, [pc, #76]	@ (8001d78 <_Z8hwAnalogv+0xb4>)
  8001d2c:	801a      	strh	r2, [r3, #0]
-			alphaAnalog_A	= (analog[0] >> 16 & 0xFFFF);	// Guarda valor Alpha A
+			alphaAnalog_B	= (analog[0] >> 16 & 0xFFFF);	// Guarda valor Alpha A
  8001d2e:	4b0f      	ldr	r3, [pc, #60]	@ (8001d6c <_Z8hwAnalogv+0xa8>)
  8001d30:	681b      	ldr	r3, [r3, #0]
  8001d32:	0c1b      	lsrs	r3, r3, #16
  8001d34:	b29a      	uxth	r2, r3
  8001d36:	4b11      	ldr	r3, [pc, #68]	@ (8001d7c <_Z8hwAnalogv+0xb8>)
  8001d38:	801a      	strh	r2, [r3, #0]
-			alphaAnalog_B	= (analog[1] & 0xFFFF);			// Guarda valor Alpha B
+			alphaAnalog_A	= (analog[1] & 0xFFFF);			// Guarda valor Alpha B
  8001d3a:	4b0c      	ldr	r3, [pc, #48]	@ (8001d6c <_Z8hwAnalogv+0xa8>)
  8001d3c:	685b      	ldr	r3, [r3, #4]
  8001d3e:	b29a      	uxth	r2, r3
@@ -4127,8 +4127,8 @@ void hwAnalog(){
  8001d70:	20000628 	.word	0x20000628
  8001d74:	20001138 	.word	0x20001138
  8001d78:	20000470 	.word	0x20000470
- 8001d7c:	20000472 	.word	0x20000472
- 8001d80:	20000474 	.word	0x20000474
+ 8001d7c:	20000474 	.word	0x20000474
+ 8001d80:	20000472 	.word	0x20000472
 
 08001d84 <_Z8hwEEPROMv>:
  * 1. Indicar cada uno de los pasos de calibracion

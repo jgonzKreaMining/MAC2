@@ -103,7 +103,6 @@ void linkOutGps(){
 void linkOutDisplay(){
 
 	digit	= displayPhy.next();					// Copia el valor del digito que se desplegara
-
 	digit	= displayLink.numberInDigit( digit );	// Indica valor en Display
 	displayPhy.setNumber(digit);					// Inserta numero en capa fisica
 

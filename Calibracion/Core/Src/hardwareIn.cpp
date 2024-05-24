@@ -322,10 +322,10 @@ void hwAds1115(){
 		countAdc	= 0;																// Reinicia contador
 		HAL_I2C_Master_Receive_DMA(&hi2c1, ADS1115_ADDRESS<<1, buffer_ADS_I2C_IN, 2);	// Solicita datos del buffer
 		if ( selectChannelAds ){														// Si esta seleccionado channel 0
-			alphaA = ( buffer_ADS_I2C_IN[0] << 8 | buffer_ADS_I2C_IN[1] );				// Guarda en Alpha0
+			alphaB = ( buffer_ADS_I2C_IN[0] << 8 | buffer_ADS_I2C_IN[1] );				// Guarda en Alpha0
 		}
 		else{																			// Si esta seleccionado channel 1
-			alphaB = ( buffer_ADS_I2C_IN[0] << 8 | buffer_ADS_I2C_IN[1] );				// Guarda en Alpha1
+			alphaA = ( buffer_ADS_I2C_IN[0] << 8 | buffer_ADS_I2C_IN[1] );				// Guarda en Alpha1
 		}
 		stateAdc	= 5;																// Pasa a S5
 		break;
@@ -639,8 +639,8 @@ void hwAnalog(){
 	case 2:
 		if ( flagAnalog ){									// Si guardo correctamente
 			battery			= (analog[0] & 0xFFFF);			// Guarda valor bateria
-			alphaAnalog_A	= (analog[0] >> 16 & 0xFFFF);	// Guarda valor Alpha A
-			alphaAnalog_B	= (analog[1] & 0xFFFF);			// Guarda valor Alpha B
+			alphaAnalog_B	= (analog[0] >> 16 & 0xFFFF);	// Guarda valor Alpha A
+			alphaAnalog_A	= (analog[1] & 0xFFFF);			// Guarda valor Alpha B
 			flagAnalog		= 0;							// Reinicia flag de medicion analogica
 			stateAnalog		= 0;							// Vuelve a S0
 		}

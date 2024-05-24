@@ -3,8 +3,8 @@
 ../Core/Src/hardwareIn.cpp:253:6:void hwAds1115()	13
 ../Core/Src/hardwareIn.cpp:378:6:void hwSht31()	15
 ../Core/Src/hardwareIn.cpp:526:6:void hwBoton()	9
-../Core/Src/hardwareIn.cpp:596:6:void hwGpsIn()	3
-../Core/Src/hardwareIn.cpp:617:6:void hwAnalog()	7
-../Core/Src/hardwareIn.cpp:708:6:void hwEEPROM()	12
-../Core/Src/hardwareIn.cpp:825:1:void __static_initialization_and_destruction_0(int, int)	3
-../Core/Src/hardwareIn.cpp:825:1:cpp)	1
+../Core/Src/hardwareIn.cpp:598:6:void hwGpsIn()	3
+../Core/Src/hardwareIn.cpp:619:6:void hwAnalog()	7
+../Core/Src/hardwareIn.cpp:710:6:void hwEEPROM()	12
+../Core/Src/hardwareIn.cpp:827:1:void __static_initialization_and_destruction_0(int, int)	3
+../Core/Src/hardwareIn.cpp:827:1:cpp)	1
