@@ -2,7 +2,7 @@ C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 ../Core/Inc/fifoUart.h:18:7:fifoCommands::fifoCommands()	1
 ../Core/Src/main.cpp:220:5:int main()	2
 ../Core/Src/main.cpp:328:6:void SystemClock_Config()	4
-../Core/Src/main.cpp:372:6:void MX_IWDG_Init()	2
+../Core/Src/main.cpp:372:6:void MX_IWDG_Init()	1
 ../Core/Src/main.cpp:398:13:void MX_ADC1_Init()	6
 ../Core/Src/main.cpp:482:13:void MX_I2C1_Init()	4
 ../Core/Src/main.cpp:529:13:void MX_TIM6_Init()	3

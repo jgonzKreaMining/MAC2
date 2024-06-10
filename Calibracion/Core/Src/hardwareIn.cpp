@@ -211,8 +211,8 @@ void hwInput(){
 	hwAds1115();
 	hwAnalog();
 	hwEEPROM();
-	hwGpsIn();
-	hwLoraIn();
+	//hwGpsIn();
+	//hwLoraIn();
 }
 
 /***********************

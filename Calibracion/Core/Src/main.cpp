@@ -64,7 +64,7 @@ DMA_HandleTypeDef hdma_uart5_tx;
 
 TIM_HandleTypeDef htim6;
 
-IWDG_HandleTypeDef hiwdg;
+//IWDG_HandleTypeDef hiwdg;
 
 /* USER CODE BEGIN PV */
 
@@ -290,15 +290,15 @@ int main(void)
   loraInput.insertBuffer( bufferLoraIn, sizeof(bufferLoraIn));
   //displayLink.inputDisplay(8888, 3);
   //
-  HAL_IWDG_Init(&hiwdg);
+  //HAL_IWDG_Init(&hiwdg);
   while (1)
   {
 
 	  hwInput();
 	  linkInput();
-	  tcpInput();
+	  //tcpInput();
 	  app();
-	  tcpOutput();
+	  //tcpOutput();
 	  linkOutput();
 	  hwOutput();
 
@@ -308,14 +308,14 @@ int main(void)
 
 
 	  HAL_SuspendTick();
-	  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+	  //HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 
 	  while (!flagSuperloop){	// SI NO SE HA CUMPLIDO L TIMER
-	  }							// ESPERA ETERNAMENTE
+	  }// ESPERA ETERNAMENTE
 	  flagSuperloop	= 0;		// REINICIA FLAG
 
 	  HAL_ResumeTick();
-	  HAL_IWDG_Refresh(&hiwdg);
+	  //HAL_IWDG_Refresh(&hiwdg);
 
   }
   /* USER CODE END 3 */
@@ -376,15 +376,15 @@ void MX_IWDG_Init(void)
   /* USER CODE END IWDG_Init 0 */
 
   /* Initialize the IWDG peripheral */
-  hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
-  hiwdg.Init.Reload = 399;
-  hiwdg.Init.Window	= 390;
+  //hiwdg.Instance = IWDG;
+  //hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
+  //hiwdg.Init.Reload = 399;
+  //hiwdg.Init.Window	= 390;
 
-  if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
-  {
-    Error_Handler();
-  }
+  //if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
+  //{
+    //Error_Handler();
+  //}
 
   /* USER CODE BEGIN IWDG_Init 1 */
 

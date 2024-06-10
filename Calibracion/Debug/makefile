@@ -84,8 +84,8 @@ all: main-build
 main-build: Calibracion.elf secondary-outputs
 
 # Tool invocations
-Calibracion.elf Calibracion.map: $(OBJS) $(USER_OBJS) C:\Users\Lenovo\OneDrive\Escritorio\KreaDocs\MAC2_14-05-24\MAC2-master\Calibracion\STM32L496VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Lenovo\OneDrive\Escritorio\KreaDocs\MAC2_14-05-24\MAC2-master\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Calibracion.elf Calibracion.map: $(OBJS) $(USER_OBJS) C:\Users\Lenovo\OneDrive\Escritorio\KreaDocs\MAC2\Calibracion\STM32L496VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "Calibracion.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Lenovo\OneDrive\Escritorio\KreaDocs\MAC2\Calibracion\STM32L496VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Calibracion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

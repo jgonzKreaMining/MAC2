@@ -96,12 +96,13 @@ uint8_t countChSet;						//
 // WARMING //
 /////////////
 
-uint8_t stateWarming;							//
-uint32_t countWarming;							//
-uint32_t limitWarming	= 5000;//1200000/superloop;	//
+uint8_t stateWarming = 0;							//
+uint32_t countWarming = 0;							//
+uint32_t limitWarming	= 1200000/superloop;	//superloop son 2[mS, esta operacion son 20 min.
+//uint32_t limitWarming	= 1000000/superloop;
 
-bool flagWarmingOk;								//
-bool flagResetWarming;							//
+bool flagWarmingOk = false;								//
+bool flagResetWarming = false;							//
 
 /////////////
 // PROCESS //
@@ -603,7 +604,7 @@ void process(){
 		break;
 
 	default:
-		stateProcess	= 0;
+		//stateProcess	= 0;
 		break;
 	}
 
